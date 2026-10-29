@@ -173,12 +173,29 @@ body.nav-closed .sidebar{margin-left:-264px}
 .sm{position:fixed;inset:0;z-index:55;background:var(--bg);display:none;flex-direction:column}.sm.visible{display:flex}
 .sm-top{height:64px;display:flex;align-items:center;gap:8px;padding:0 16px 0 8px;flex:none}.sm-top h2{font-size:22px;font-weight:400;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sm-top .grow{flex:1}
 .sm-body{flex:1;min-height:0;overflow:auto;padding:0 16px 24px}.sm-wrap{max-width:1180px;margin:0 auto}
-.sm-sum{background:var(--surface);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px}
-.sm-sum-h{font-size:15px;color:var(--muted)}.sm-sum-h b{font-size:26px;font-weight:500;color:var(--text);margin-right:4px}
-.sm-seg{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--line);margin:12px 0 10px;gap:2px}.sm-seg i{display:block;height:100%;min-width:3px}
-.sm-legend{display:flex;flex-wrap:wrap;gap:4px 6px}.sm-legend button{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;color:var(--muted);font-size:12.5px}
-.sm-legend button:hover,.sm-legend button.on{background:var(--primary-soft);color:var(--sel-text)}.sm-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}.sm-legend small{color:var(--faint)}
-.sm-facts{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:10px;font-size:12.5px;color:var(--muted)}.sm-facts b{color:var(--text);font-weight:500}.sm-facts .hint{color:var(--faint)}
+
+.sm-sum{background:var(--surface);border-radius:var(--radius);padding:20px 22px;margin-bottom:12px;position:relative;overflow:hidden}
+.sm-ind{position:absolute;left:0;right:0;top:0;height:3px;background:var(--line);overflow:hidden}.sm-ind::after{content:"";position:absolute;top:0;bottom:0;width:30%;background:var(--primary);animation:smind 1.2s ease-in-out infinite}@keyframes smind{0%{left:-30%}100%{left:100%}}
+.sm-dash{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px 36px}
+.sm-usage{display:flex;gap:22px;align-items:center;min-width:0}
+.sm-donut{width:144px;height:144px;border-radius:50%;background:var(--d,var(--line));position:relative;flex:none;display:grid;place-items:center}
+.sm-donut::after{content:"";position:absolute;inset:18px;border-radius:50%;background:var(--surface)}
+.sm-donut>div{position:relative;z-index:1;text-align:center;line-height:1.2}.sm-donut b{display:block;font-size:24px;font-weight:500}.sm-donut small{color:var(--faint);font-size:12px}
+.sm-lg{flex:1;min-width:0}.sm-sum-h{font-size:13px;color:var(--muted);margin:0 0 6px 8px}.sm-sum-h b{font-size:22px;font-weight:500;color:var(--text);margin-right:5px}
+.sm-legend{display:flex;flex-direction:column;gap:1px}.sm-legend .none,.sm-clean .none{color:var(--faint);font-size:13px;padding:6px 8px}
+.sm-legend button{display:grid;grid-template-columns:10px minmax(0,1fr) auto;align-items:center;gap:2px 10px;padding:5px 8px;border-radius:8px;color:var(--muted);font-size:13px;text-align:left}
+.sm-legend button:hover,.sm-legend button.on{background:var(--primary-soft);color:var(--sel-text)}
+.sm-legend i{width:10px;height:10px;border-radius:50%;display:block}.sm-legend .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sm-legend small{color:var(--faint);margin-left:6px}.sm-legend button.on small{color:inherit}
+.sm-legend b{font-weight:500;color:var(--text)}.sm-legend button.on b{color:inherit}
+.sm-legend .bar{grid-column:2/4;height:3px;border-radius:3px;background:var(--line);overflow:hidden}.sm-legend .bar u{display:block;height:100%;border-radius:3px;text-decoration:none}
+.sm-clean{min-width:0}.sm-clean h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 8px}
+.sm-reclaim{display:flex;align-items:baseline;gap:4px 10px;flex-wrap:wrap;margin-bottom:10px}.sm-reclaim b{font-size:26px;font-weight:500;color:var(--primary)}.sm-reclaim span{color:var(--muted);font-size:12.5px;flex:1 1 180px}
+.sm-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
+.sm-card{text-align:left;border:1px solid var(--outline);border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:34px 1fr;gap:1px 10px;align-items:center}.sm-card:hover{background:var(--hover)}
+.sm-card .ic{grid-row:1/4;width:34px;height:34px;border-radius:50%;background:var(--primary-soft);color:var(--sel-text);display:grid;place-items:center}.sm-card .ic .icon{width:18px;height:18px}
+.sm-card b{font-weight:500}.sm-card>span:not(.ic){color:var(--primary);font-size:13px;font-weight:500}.sm-card small{color:var(--faint);font-size:12px;line-height:1.3}
+.sm-facts{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}.sm-facts b{color:var(--text);font-weight:500}.sm-facts .hint{color:var(--faint)}
+.sm-facts button{color:inherit}.sm-facts button:hover b{text-decoration:underline}
 .sm-views{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
 .sm-views .chip{height:34px;padding:0 14px;border-radius:999px;background:var(--surface);border-color:transparent;gap:6px}.sm-views .chip small{color:var(--faint)}.sm-views .chip.on small{color:inherit}
 .sm-filters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;background:var(--surface);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px}
@@ -186,25 +203,37 @@ body.nav-closed .sidebar{margin-left:-264px}
 .sm-f.date{flex:2 1 320px}.sm-date-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.sm-date-row .field{flex:1 1 130px;width:auto}.sm-date-row .chip{height:36px}
 .sm-chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px;align-items:center}.sm-chips .lab{font-size:12px;color:var(--faint);margin-right:2px;min-width:52px}
 .sm-chips .chip{background:var(--surface)}.sm-chips .chip.on{background:var(--primary-soft)}.sm-chips .chip small{color:var(--faint)}.sm-chips .chip.on small{color:inherit}.sm-chips .chip .gi{display:inline-flex}.sm-chips .chip .gi .icon{width:18px;height:18px}
+.sm-active{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 8px}.sm-active:empty{display:none}.sm-active .lab{font-size:12px;color:var(--faint);margin-right:2px}
+.sm-active .chip{background:var(--primary-soft);color:var(--sel-text);border-color:transparent;height:30px}.sm-active .chip .icon{width:16px;height:16px}
+.sm-active .lnk{color:var(--primary);font-weight:500;padding:4px 10px;border-radius:999px}.sm-active .lnk:hover{background:var(--hover)}
 .sm-selbar{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:var(--hover);border-radius:14px;padding:6px 8px 6px 14px;margin:10px 0 8px;min-height:48px;color:var(--muted)}
 .sm-selbar.on{background:var(--primary-soft);color:var(--sel-text)}.sm-selbar .info{flex:1;min-width:160px}.sm-selbar .info b{color:var(--text);font-weight:500}.sm-selbar.on .info b{color:inherit}
 .sm-selbar .btn{height:36px;padding:0 14px}.sm-selbar .btn.danger{color:var(--danger)}
-.sm-table{background:var(--surface);border-radius:var(--radius);overflow:hidden}
-.sm-row,.sm-head{display:grid;grid-template-columns:44px minmax(180px,1fr) 120px 110px 130px 84px;align-items:center;column-gap:8px;padding-right:8px}
-.sm-head{height:42px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:500;font-size:13px}
-.sm-row{min-height:52px;border-bottom:1px solid var(--line)}.sm-row:last-child{border-bottom:0}.sm-row:hover{background:var(--hover)}.sm-row.sel{background:var(--sel);color:var(--sel-text)}
+.sm-table{background:var(--surface);border-radius:var(--radius);overflow:clip}
+.sm-row,.sm-head{display:grid;grid-template-columns:44px minmax(220px,1fr) 130px 90px 120px 100px 120px;align-items:center;column-gap:8px;padding-right:8px}
+.sm-head{position:sticky;top:var(--selh,50px);z-index:2;background:var(--surface);height:42px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:500;font-size:13px}
+.sm-head button{display:inline-flex;align-items:center;gap:4px;height:100%;font-weight:500;color:inherit;text-align:left}.sm-head button:hover:not(:disabled){color:var(--text)}.sm-head button.on{color:var(--text)}.sm-head button:disabled{opacity:1;cursor:default}.sm-head .icon{width:15px;height:15px}
+.sm-head .sz{display:flex;justify-content:flex-end;padding-right:10px}
+.sm-row{min-height:58px;padding-top:4px;padding-bottom:4px;border-bottom:1px solid var(--line)}.sm-row:last-child{border-bottom:0}.sm-row:hover{background:var(--hover)}.sm-row.sel{background:var(--sel);color:var(--sel-text)}
 .sm-ck{display:grid;place-items:center;height:100%;cursor:pointer}.sm-ck input{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
-.sm-name{display:flex;align-items:center;gap:12px;min-width:0}.sm-name .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
-.sm-tag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:var(--primary-soft);color:var(--sel-text);font-size:11px;vertical-align:1px}
-.sm-c{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}.sm-row.sel .sm-c{color:inherit}.sm-c.sz{color:var(--text);font-weight:500;text-align:right;padding-right:10px}.sm-head .sz{text-align:right;padding-right:10px}
-.sm-act{display:flex;justify-content:flex-end}.sm-act .ib{width:36px;height:36px}.sm-act .ib .icon{width:19px;height:19px}
+.sm-name{display:flex;align-items:center;gap:12px;min-width:0}
+.sm-th{width:40px;height:40px;border-radius:8px;background:var(--hover);display:grid;place-items:center;flex:none;position:relative;overflow:hidden}.sm-th .gi .icon{width:22px;height:22px}
+.sm-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.sm-th[data-a]{cursor:zoom-in}.sm-row.sel .sm-th{background:#ffffff40}
+.sm-nm{min-width:0;display:flex;flex-direction:column;gap:2px}.sm-nm .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sm-sub{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.sm-tag{display:inline-block;padding:0 8px;border-radius:999px;background:var(--primary-soft);color:var(--sel-text);font-size:11px;line-height:18px}.sm-row.sel .sm-tag{background:#ffffff59}
+.sm-m{display:none;color:var(--faint);font-size:12px}.sm-row.sel .sm-m{color:inherit}
+.sm-c{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}.sm-row.sel .sm-c{color:inherit}
+.sm-c.sz{color:var(--text);font-weight:500;display:flex;flex-direction:column;align-items:flex-end;padding-right:10px}.sm-row.sel .sm-c.sz{color:inherit}
+.sm-bar{display:block;height:3px;border-radius:3px;background:var(--primary);opacity:.55;margin-top:4px}
+.sm-grp{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:6px 14px;background:var(--hover);border-bottom:1px solid var(--line);color:var(--muted);font-size:13px}.sm-grp b{color:var(--text);font-weight:500}.sm-grp .btn{height:30px;padding:0 12px;font-size:13px}
+.sm-act{display:flex;justify-content:flex-end}.sm-act .ib{width:34px;height:34px}.sm-act .ib .icon{width:19px;height:19px}
 .sm-empty{padding:56px 20px;text-align:center;color:var(--faint)}.sm-more{display:block;margin:12px auto 0}
 .sm-prog{display:inline-flex;align-items:center;gap:8px}.sm-prog::before{content:"";width:14px;height:14px;border:2px solid var(--outline);border-top-color:var(--primary);border-radius:50%;animation:smspin .8s linear infinite}@keyframes smspin{to{transform:rotate(360deg)}}
-@media(max-width:900px){.sm-row,.sm-head{grid-template-columns:40px minmax(140px,1fr) 100px 76px}.sm-row .c-fmt,.sm-head .c-fmt,.sm-row .c-dt,.sm-head .c-dt{display:none}.sm-top h2{font-size:18px}.sm-top .btn-text span:last-child{display:none}}
-.sm-sugg{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.sm-sugg h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 8px}
-.sm-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
-.sm-card{text-align:left;border:1px solid var(--outline);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}.sm-card:hover{background:var(--hover)}
-.sm-card b{font-weight:500}.sm-card span{color:var(--primary);font-size:13px;font-weight:500}.sm-card small{color:var(--faint);font-size:12px}
+@media(max-width:1000px){.sm-dash{grid-template-columns:1fr}.sm-row,.sm-head{grid-template-columns:44px minmax(160px,1fr) 100px 90px 110px}.sm-row .c-loc,.sm-head .c-loc,.sm-row .c-dt,.sm-head .c-dt{display:none}.sm-m{display:inline}}
+@media(max-width:700px){.sm-row,.sm-head{grid-template-columns:40px minmax(120px,1fr) 84px 76px}.sm-row .c-fmt,.sm-head .c-fmt{display:none}.sm-views{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.sm-views .chip{flex:none}
+ .sm-top h2{font-size:18px}.sm-top .btn-text span:last-child{display:none}.sm-usage{flex-direction:column;align-items:stretch}.sm-donut{margin:0 auto}.sm-sum{padding:16px 14px}.sm-act .ib{width:30px;height:30px}.sm-th{width:34px;height:34px}}
+@media(prefers-reduced-motion:reduce){.sm-ind::after,.sm-prog::before{animation:none}}
 /* pesquisa avançada */
 .search .ib.on{background:var(--primary-soft);color:var(--sel-text)}
 .adv{position:fixed;z-index:75;display:none;background:var(--surface);border-radius:20px;box-shadow:var(--shadow);width:min(680px,calc(100vw - 24px));max-height:calc(100dvh - 80px);overflow:auto;padding:18px 20px 14px;top:58px;left:12px}
@@ -276,6 +305,7 @@ body.nav-closed .sidebar{margin-left:-264px}
  <div class="sm-top"><button class="ib" id="sm-close" title="Voltar ao Drive" aria-label="Voltar ao Drive"><span data-icon="back"></span></button><h2>Gerenciar armazenamento</h2><div class="grow"></div>
   <button class="btn-text" id="sm-csv" title="Exportar a lista filtrada em CSV"><span data-icon="download"></span><span>Exportar CSV</span></button>
   <button class="btn-text" id="sm-rescan" title="Analisar o Drive novamente"><span data-icon="refresh"></span><span>Reanalisar</span></button></div>
+
  <div class="sm-body"><div class="sm-wrap">
   <section class="sm-sum" id="sm-sum"></section>
   <div class="sm-views" id="sm-views"></div>
@@ -292,8 +322,9 @@ body.nav-closed .sidebar{margin-left:-264px}
   </div>
   <div class="sm-chips" id="sm-types"></div>
   <div class="sm-chips" id="sm-fmts"></div>
+  <div class="sm-active" id="sm-active"></div>
   <div class="sm-selbar" id="sm-selbar"></div>
-  <div class="sm-table"><div class="sm-head"><label class="sm-ck"><input type="checkbox" id="sm-all" aria-label="Selecionar todos"></label><div>Nome</div><div class="c-fmt">Formato</div><div class="sz">Tamanho</div><div class="c-dt" id="sm-dthead">Modificado</div><div></div></div>
+  <div class="sm-table"><div class="sm-head" id="sm-head"></div>
    <div id="sm-list"></div></div>
   <button class="btn outline sm-more" id="sm-more" style="display:none"></button>
  </div></div>
@@ -905,8 +936,8 @@ async function openItem(f) {
  else openViewer(f);
 }
 let viewerList = [], viewerIdx = 0, viewerToken = 0, viewerUrl = null;
-function openViewer(f) {
- viewerList = state.files.filter(canPreview); if (!viewerList.some(x => x.id === f.id)) viewerList = [f];
+function openViewer(f, list) {
+ viewerList = (list || state.files).filter(canPreview); if (!viewerList.some(x => x.id === f.id)) viewerList = [f];
  viewerIdx = Math.max(0, viewerList.findIndex(x => x.id === f.id)); $('#viewer').classList.add('visible'); showViewer();
 }
 function closeViewer() { $('#viewer').classList.remove('visible'); viewerToken++; $('#v-stage').innerHTML = ''; if (viewerUrl) { URL.revokeObjectURL(viewerUrl); viewerUrl = null } }
@@ -1301,10 +1332,10 @@ const SM_SUGG = {
  dups: ['Arquivos duplicados', 'Cópias idênticas: mantenha apenas uma'], untitled: ['Sem título', 'Documentos sem nome, candidatos a revisão'], bigold: ['Grandes e antigos', '100 MB ou mais, sem alterações há 2+ anos']
 };
 const SM_SORTS = { size: ['Tamanho', it => it.quota], modified: ['Modificação', it => it.tm], created: ['Criação', it => it.tc], viewed: ['Último acesso', it => it.tv], name: ['Nome', it => it.name.toLowerCase()], kind: ['Formato', it => it.fmt] };
-const SM_FIELDS = 'id,name,mimeType,size,quotaBytesUsed,modifiedTime,createdTime,viewedByMeTime,parents,webViewLink,starred,shared,md5Checksum,fileExtension';
+const SM_FIELDS = 'id,name,mimeType,size,quotaBytesUsed,modifiedTime,createdTime,viewedByMeTime,parents,webViewLink,starred,shared,md5Checksum,fileExtension,thumbnailLink';
 const sm = {
  open: false, scanning: '', nonce: 0, all: [], trash: null, doneDrive: false, rootId: '', quota: null, dupWaste: 0, dupGroups: 0,
- view: 'all', kind: 'all', fmt: 'all', minSize: 0, q: '', ref: 'modified', before: '', sort: 'size', dir: 'desc', sel: new Set(), last: -1, shown: 200, list: []
+ view: 'all', kind: 'all', fmt: 'all', minSize: 0, q: '', ref: 'modified', before: '', sort: 'size', dir: 'desc', sel: new Set(), last: -1, shown: 200, list: [], names: new Map(), fetching: new Set()
 };
 
 function smItem(x) {
@@ -1400,20 +1431,34 @@ function smCounts() {
  return c;
 }
 function smRenderAll() { if (!sm.open) return; smRenderSum(); smRenderViews(); smRenderFacets(); smRenderList() }
+
+function smReclaim() { let n = 0, s = 0; for (const it of sm.all) if (it.temp || it.unknown || it.untitled || (it.dup > 1 && it.dupIdx > 0) || SM_VPRED.bigold(it)) { n++; s += it.quota } return { n, s } }
+const SM_SICON = { temp: 'clock', unknown: 'info', dups: 'copy', untitled: 'edit', bigold: 'archive' };
 function smRenderSum() {
  if (!sm.open) return;
  const q = sm.quota || {}, used = +q.usage || 0, limit = +q.limit || 0, drive = +q.usageInDrive || 0, trash = +q.usageInDriveTrash || 0, other = Math.max(0, used - drive);
  const sums = {}; let tot = 0;
  for (const it of sm.all) { const o = sums[it.kind] || (sums[it.kind] = { n: 0, s: 0 }); o.n++; o.s += it.quota; tot += it.quota }
- const kinds = Object.keys(sums).filter(k => sums[k].s > 0).sort((a, b) => sums[b].s - sums[a].s), cn = smCounts();
+ const kinds = Object.keys(sums).filter(k => sums[k].s > 0).sort((a, b) => sums[b].s - sums[a].s), cn = smCounts(), rc = smReclaim();
  const sugg = Object.keys(SM_SUGG).filter(k => cn[k].n > 0).sort((a, b) => cn[b].s - cn[a].s);
- $('#sm-sum').innerHTML =
-  `<div class="sm-sum-h"><b>${bytes(used)}</b>${limit ? `de ${bytes(limit)} usados (${Math.round(used / limit * 100)}%)` : 'usados'}</div>` +
-  `<div class="sm-seg" role="img" aria-label="Distribuição por tipo">${kinds.map(k => `<i style="width:${sums[k].s / tot * 100}%;background:${SM_KIND_COLOR[k]}" title="${SM_KIND_LABEL[k]}: ${bytes(sums[k].s)}"></i>`).join('')}</div>` +
-  `<div class="sm-legend">${kinds.map(k => `<button data-kind="${k}" class="${sm.kind === k ? 'on' : ''}"><i style="background:${SM_KIND_COLOR[k]}"></i>${SM_KIND_LABEL[k]} <b>${bytes(sums[k].s)}</b> <small>${smN(sums[k].n)}</small></button>`).join('')}</div>` +
-  `<div class="sm-facts">${drive ? `<span>No Drive: <b>${bytes(drive)}</b></span>` : ''}<span>Lixeira: <b>${bytes(trash)}</b></span>${other > 0 ? `<span>Gmail e Fotos: <b>${bytes(other)}</b></span>` : ''}` +
-  `<span class="hint">${sm.scanning === 'drive' ? `<span class="sm-prog">Analisando… ${smN(sm.all.length)} arquivos</span>` : `${smN(sm.all.length)} arquivos analisados (somente os que são seus). Docs, Planilhas e Apresentações do Google não ocupam espaço.`}</span></div>` +
-  (sugg.length ? `<div class="sm-sugg"><h3>Sugestões de limpeza</h3><div class="sm-cards">${sugg.map(k => `<button class="sm-card" data-view="${k}"><b>${SM_SUGG[k][0]}</b><span>${smN(cn[k].n)} ${cn[k].n === 1 ? 'arquivo' : 'arquivos'} · ${k === 'dups' ? 'libera ' : ''}${bytes(cn[k].s)}</span><small>${SM_SUGG[k][1]}</small></button>`).join('')}</div></div>` : '');
+ /* rosca: parte de cada tipo em relação à capacidade (ou ao total analisado, se não houver limite) */
+ const base = limit || tot || 1, deg = v => Math.min(360, v / base * 360).toFixed(2), stops = []; let acc = 0;
+ for (const k of kinds) { stops.push(`${SM_KIND_COLOR[k]} ${deg(acc)}deg ${deg(acc + sums[k].s)}deg`); acc += sums[k].s }
+ if (limit) { const rest = Math.max(0, used - tot); if (rest > 0) { stops.push(`var(--outline) ${deg(acc)}deg ${deg(acc + rest)}deg`); acc += rest } }
+ stops.push(`var(--line) ${deg(acc)}deg 360deg`);
+ const pct = limit ? Math.round(used / limit * 100) : 0, top = kinds.length ? sums[kinds[0]].s : 1;
+ const scan = sm.scanning === 'drive';
+ $('#sm-sum').innerHTML = (scan ? '<div class="sm-ind" role="progressbar" aria-label="Analisando o Drive"></div>' : '') +
+  `<div class="sm-dash"><div class="sm-usage">` +
+  `<div class="sm-donut" style="--d:conic-gradient(${stops.join(',')})" role="img" aria-label="${limit ? pct + '% do armazenamento usado' : 'Distribuição por tipo'}"><div><b>${limit ? pct + '%' : bytes(used || tot)}</b><small>${limit ? 'usado' : 'analisado'}</small></div></div>` +
+  `<div class="sm-lg"><div class="sm-sum-h"><b>${bytes(used)}</b>${limit ? `de ${bytes(limit)}` : 'usados'}</div><div class="sm-legend">` +
+  (kinds.map(k => `<button data-kind="${k}" class="${sm.kind === k ? 'on' : ''}" title="Filtrar por ${SM_KIND_LABEL[k].toLowerCase()}"><i style="background:${SM_KIND_COLOR[k]}"></i><span class="n">${SM_KIND_LABEL[k]}<small>${smN(sums[k].n)}</small></span><b>${bytes(sums[k].s)}</b><span class="bar"><u style="width:${Math.max(2, sums[k].s / top * 100)}%;background:${SM_KIND_COLOR[k]}"></u></span></button>`).join('') || `<div class="none">${scan ? 'Analisando…' : 'Nenhum arquivo que ocupe espaço.'}</div>`) +
+  `</div></div></div>` +
+  `<div class="sm-clean"><h3>Sugestões de limpeza</h3>` + (sugg.length
+   ? `<div class="sm-reclaim"><b>${bytes(rc.s)}</b><span>podem ser liberados (estimativa, ${smN(rc.n)} ${rc.n === 1 ? 'arquivo' : 'arquivos'}). Revise antes de excluir.</span></div><div class="sm-cards">${sugg.map(k => `<button class="sm-card" data-view="${k}"><span class="ic">${icon(SM_SICON[k])}</span><b>${SM_SUGG[k][0]}</b><span>${smN(cn[k].n)} ${cn[k].n === 1 ? 'arquivo' : 'arquivos'} · ${k === 'dups' ? 'libera ' : ''}${bytes(cn[k].s)}</span><small>${SM_SUGG[k][1]}</small></button>`).join('')}</div>`
+   : `<div class="none">${scan ? 'Procurando arquivos para limpar…' : 'Nenhuma sugestão: seu Drive parece organizado.'}</div>`) + `</div></div>` +
+  `<div class="sm-facts">${drive ? `<span>No Drive: <b>${bytes(drive)}</b></span>` : ''}<button data-view="trash" title="Ver a lixeira">Lixeira: <b>${bytes(trash)}</b></button>${other > 0 ? `<span>Gmail e Fotos: <b>${bytes(other)}</b></span>` : ''}` +
+  `<span class="hint">${scan ? `<span class="sm-prog">Analisando… ${smN(sm.all.length)} arquivos</span>` : `${smN(sm.all.length)} arquivos analisados (somente os que são seus). Docs, Planilhas e Apresentações do Google não ocupam espaço.`}</span></div>`;
 }
 function smRenderViews() {
  const cn = smCounts();
@@ -1447,22 +1492,78 @@ function smTags(it) {
  }
  return t.map(x => `<span class="sm-tag">${x}</span>`).join('');
 }
-function smRowHTML(it) {
+
+const smKindIcon = it => `<span class="gi k-${it.kind}">${icon(ICONS[it.kind] ? it.kind : 'file')}</span>`;
+function smRowHTML(it, maxQ) {
  const on = sm.sel.has(it.id), t = sm.view === 'old' ? (sm.ref === 'created' ? it.createdTime : sm.ref === 'viewed' ? (it.viewed || it.createdTime) : it.modifiedTime) : it.modifiedTime;
- return `<div class="sm-row ${on ? 'sel' : ''}" data-id="${esc(it.id)}"><label class="sm-ck"><input type="checkbox" data-ck ${on ? 'checked' : ''} aria-label="Selecionar ${esc(it.name)}"></label>` +
-  `<div class="sm-name">${glyph(it)}<span class="nm" title="${esc(it.name)}">${esc(it.name || '(sem nome)')}${smTags(it)}</span></div><div class="sm-c c-fmt">${esc(it.fmt)}</div>` +
-  `<div class="sm-c sz" ${it.native ? 'title="Arquivos nativos do Google não ocupam espaço"' : ''}>${it.native && !it.quota ? '—' : bytes(it.quota)}</div><div class="sm-c c-dt">${fmtDate(t)}</div>` +
-  `<div class="sm-act"><button class="ib" data-a="open" title="Abrir no Google Drive" aria-label="Abrir no Drive">${icon('external')}</button>${sm.view === 'trash' ? '' : `<button class="ib" data-a="folder" title="Mostrar na pasta" aria-label="Mostrar na pasta">${icon('folder')}</button>`}</div></div>`;
+ const p = it.parents[0] || '', loc = p && p === sm.rootId ? 'Meu Drive' : (sm.names.get(p) || (p ? '…' : '—'));
+ const pv = canPreview(it), pct = maxQ && it.quota ? Math.max(3, Math.round(it.quota / maxQ * 100)) : 0;
+ return `<div class="sm-row ${on ? 'sel' : ''}" data-id="${esc(it.id)}"><label class="sm-ck"><input type="checkbox" ${on ? 'checked' : ''} aria-label="Selecionar ${esc(it.name)}"></label>` +
+  `<div class="sm-name"><span class="sm-th" ${pv ? 'data-a="view" title="Visualizar"' : ''}>${smKindIcon(it)}${it.thumb ? `<img src="${esc(it.thumb.replace(/=s\d+$/, '=s96'))}" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.remove()">` : ''}</span>` +
+  `<div class="sm-nm"><span class="nm" title="${esc(it.name)}">${esc(it.name || '(sem nome)')}</span><div class="sm-sub">${smTags(it)}<span class="sm-m">${esc(it.fmt)} · ${fmtDate(t)}</span></div></div></div>` +
+  `<div class="sm-c c-loc" data-loc="${esc(p)}" title="${esc(loc)}">${esc(loc)}</div><div class="sm-c c-fmt">${esc(it.fmt)}</div>` +
+  `<div class="sm-c sz" ${it.native ? 'title="Arquivos nativos do Google não ocupam espaço"' : ''}><span>${it.native && !it.quota ? '—' : bytes(it.quota)}</span>${pct ? `<i class="sm-bar" style="width:${pct}%"></i>` : ''}</div><div class="sm-c c-dt">${fmtDate(t)}</div>` +
+  `<div class="sm-act">${pv ? `<button class="ib" data-a="view" title="Visualizar" aria-label="Visualizar">${icon('eye')}</button>` : ''}<button class="ib" data-a="open" title="Abrir no Google Drive" aria-label="Abrir no Drive">${icon('external')}</button>${sm.view === 'trash' ? '' : `<button class="ib" data-a="folder" title="Mostrar na pasta" aria-label="Mostrar na pasta">${icon('folder')}</button>`}</div></div>`;
+}
+/* nome da pasta onde cada arquivo está (resolvido sob demanda e guardado em cache) */
+async function smNames(items) {
+ const need = [...new Set(items.map(i => i.parents[0]).filter(Boolean))].filter(id => id !== sm.rootId && !sm.names.has(id) && !sm.fetching.has(id));
+ if (!need.length) return;
+ need.forEach(id => sm.fetching.add(id));
+ await smPool(need, 6, async id => {
+  try { sm.names.set(id, (await jget('/files/' + enc(id), { supportsAllDrives: true, fields: 'id,name' })).name || '—') } catch { sm.names.set(id, '—') } finally { sm.fetching.delete(id) }
+ });
+ document.querySelectorAll('#sm-list [data-loc]').forEach(el => { const n = el.dataset.loc === sm.rootId ? 'Meu Drive' : sm.names.get(el.dataset.loc); if (n) { el.textContent = n; el.title = n } });
+}
+function smRenderHead() {
+ const dups = sm.view === 'dups', dk = sm.view === 'old' ? (sm.ref === 'created' ? 'created' : sm.ref === 'viewed' ? 'viewed' : 'modified') : 'modified';
+ const dl = sm.view === 'old' ? { modified: 'Modificado', created: 'Criado', viewed: 'Último acesso' }[sm.ref] : 'Modificado';
+ const h = (key, label, cls = '') => { const on = !dups && sm.sort === key; return `<div class="${cls}"><button data-sort="${key}" class="${on ? 'on' : ''}" ${dups ? 'disabled' : ''}>${label}${on ? icon(sm.dir === 'asc' ? 'arrow-up' : 'arrow-down') : ''}</button></div>` };
+ $('#sm-head').innerHTML = `<label class="sm-ck"><input type="checkbox" id="sm-all" aria-label="Selecionar todos"></label>${h('name', 'Nome')}<div class="c-loc">Pasta</div>${h('kind', 'Formato', 'c-fmt')}${h('size', 'Tamanho', 'sz')}${h(dk, dl, 'c-dt')}<div></div>`;
+}
+function smSortBy(k) {
+ if (sm.view === 'dups') return;
+ sm.dir = sm.sort === k ? (sm.dir === 'asc' ? 'desc' : 'asc') : (k === 'name' || k === 'kind' ? 'asc' : 'desc'); sm.sort = k;
+ smRenderViews(); smRenderList();
+}
+/* filtros ativos (chips removíveis) */
+function smActive() {
+ const a = [];
+ if (sm.kind !== 'all') a.push(['kind', SM_KIND_LABEL[sm.kind]]);
+ if (sm.fmt !== 'all') a.push(['fmt', 'Formato: ' + sm.fmt]);
+ if (sm.q) a.push(['q', `Nome: “${sm.q}”`]);
+ if (sm.minSize) a.push(['min', '≥ ' + bytes(sm.minSize)]);
+ if (sm.view === 'old' && sm.before) a.push(['before', `${{ modified: 'Modificado', created: 'Criado', viewed: 'Acessado' }[sm.ref]} antes de ${fmtDate(sm.before + 'T12:00:00')}`]);
+ return a;
+}
+function smRenderActive() {
+ const a = smActive();
+ $('#sm-active').innerHTML = a.length ? '<span class="lab">Filtros ativos</span>' + a.map(([k, l]) => `<button class="chip" data-clear="${k}" title="Remover filtro">${esc(l)}${icon('x')}</button>`).join('') + (a.length > 1 ? '<button class="lnk" data-clear="all">Limpar tudo</button>' : '') : '';
+}
+function smClear(k) {
+ const all = k === 'all';
+ if (all || k === 'kind') sm.kind = 'all';
+ if (all || k === 'kind' || k === 'fmt') sm.fmt = 'all';
+ if (all || k === 'q') { sm.q = ''; $('#sm-q').value = '' }
+ if (all || k === 'min') { sm.minSize = 0; $('#sm-min').value = '0' }
+ if (all || k === 'before') { sm.before = ''; $('#sm-before').value = '' }
+ sm.shown = 200; sm.sel.clear(); smRenderAll();
 }
 function smRenderList() {
  if (!sm.open) return;
  const list = sm.list = smList(), box = $('#sm-list');
+ smRenderHead(); smRenderActive();
  const src = smSource(), busy = sm.scanning === (sm.view === 'trash' ? 'trash' : 'drive');
- $('#sm-dthead').textContent = sm.view === 'old' ? { modified: 'Modificado', created: 'Criado', viewed: 'Último acesso' }[sm.ref] : 'Modificado';
- box.innerHTML = list.slice(0, sm.shown).map(smRowHTML).join('') ||
+ const shown = list.slice(0, sm.shown), maxQ = list.reduce((m, i) => i.quota > m ? i.quota : m, 0);
+ let html = '', gk = '';
+ for (const it of shown) {
+  if (sm.view === 'dups' && it.dup > 1 && it.dupKey !== gk) { gk = it.dupKey; html += `<div class="sm-grp"><span><b>${it.dup} cópias idênticas</b> · ${bytes(it.quota)} cada · liberam ${bytes(it.gw)}</span><button class="btn outline" data-g="${esc(gk)}">Selecionar cópias extras</button></div>` }
+  html += smRowHTML(it, maxQ);
+ }
+ box.innerHTML = html ||
   `<div class="sm-empty">${busy ? '<span class="sm-prog">Analisando seu Drive…</span>' : !src.length && sm.view === 'trash' && sm.trash ? 'A lixeira está vazia.' : !src.length && !sm.doneDrive && sm.view !== 'trash' ? 'Nenhum arquivo analisado ainda.' : 'Nenhum arquivo encontrado com estes filtros.'}</div>`;
  const more = $('#sm-more'); more.style.display = list.length > sm.shown ? '' : 'none'; more.textContent = `Mostrar mais (${smN(list.length - sm.shown)} restantes)`;
- smRenderSel();
+ smRenderSel(); smNames(shown);
 }
 function smRenderSel() {
  const list = sm.list, sel = list.filter(it => sm.sel.has(it.id)), size = sel.reduce((s, i) => s + i.quota, 0), total = list.reduce((s, i) => s + i.quota, 0), bar = $('#sm-selbar'), trash = sm.view === 'trash';
@@ -1477,6 +1578,7 @@ function smRenderSel() {
   (trash && sm.trash && sm.trash.length ? '<button class="btn danger" data-s="empty">Esvaziar lixeira</button>' : '') +
   (list.length ? `<button class="btn" data-s="all">Selecionar todos (${smN(list.length)})</button>` : '');
  bar.innerHTML = html;
+ const tb = $('.sm-table'); if (tb) tb.style.setProperty('--selh', bar.offsetHeight + 'px');
 }
 
 /* ações */
@@ -1519,7 +1621,8 @@ function smCSV() {
 function smBind() {
  $('#sm-btn').onclick = smOpen; $('#sm-close').onclick = smClose; $('#sm-rescan').onclick = smRescan; $('#sm-csv').onclick = smCSV;
  const setKind = k => { sm.kind = sm.kind === k ? 'all' : k; sm.fmt = 'all'; sm.shown = 200; sm.sel.clear(); smRenderAll() };
- $('#sm-sum').onclick = e => { const v = e.target.closest('[data-view]'); if (v) return smSetView(v.dataset.view); const k = e.target.closest('[data-kind]'); if (k) setKind(k.dataset.kind) };
+ const toList = () => $('#sm-views').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+ $('#sm-sum').onclick = e => { const v = e.target.closest('[data-view]'); if (v) { smSetView(v.dataset.view); return toList() } const k = e.target.closest('[data-kind]'); if (k) { setKind(k.dataset.kind); toList() } };
  $('#sm-views').onclick = e => { const v = e.target.closest('[data-view]'); if (v) smSetView(v.dataset.view) };
  $('#sm-types').onclick = e => { const k = e.target.closest('[data-kind]'); if (!k) return; if (k.dataset.kind === 'all') { sm.kind = 'all'; sm.fmt = 'all'; sm.shown = 200; sm.sel.clear(); smRenderAll() } else setKind(k.dataset.kind) };
  $('#sm-fmts').onclick = e => { const f = e.target.closest('[data-fmt]'); if (f) { sm.fmt = f.dataset.fmt; sm.shown = 200; sm.sel.clear(); smRenderAll() } };
@@ -1531,24 +1634,38 @@ function smBind() {
  $('#sm-sort').onchange = e => { sm.sort = e.target.value; sm.dir = sm.sort === 'name' || sm.sort === 'kind' ? 'asc' : 'desc'; smRenderViews(); smRenderList() };
  $('#sm-dir').onclick = () => { sm.dir = sm.dir === 'asc' ? 'desc' : 'asc'; smRenderViews(); smRenderList() };
  $('#sm-more').onclick = () => { sm.shown += 300; smRenderList() };
- $('#sm-all').onchange = e => { if (e.target.checked) sm.list.forEach(i => sm.sel.add(i.id)); else sm.sel.clear(); smRenderList() };
+
  $('#sm-list').onclick = e => {
+  if (e.target.closest('.sm-ck') && !e.target.matches('input')) return; // evita alternar duas vezes ao clicar no rótulo
+  const g = e.target.closest('[data-g]');
+  if (g) { sm.list.filter(i => i.dupKey === g.dataset.g && i.dupIdx > 0).forEach(i => sm.sel.add(i.id)); smRenderList(); return }
   const row = e.target.closest('[data-id]'); if (!row) return; const it = sm.list.find(i => i.id === row.dataset.id); if (!it) return;
   const a = e.target.closest('[data-a]');
-  if (a) { if (a.dataset.a === 'open') openInDrive(it); else { smClose(); nav('folder', it.parents[0] || 'root') } return }
+  if (a) { if (a.dataset.a === 'open') openInDrive(it); else if (a.dataset.a === 'view') openViewer(it, sm.list); else { smClose(); nav('folder', it.parents[0] || 'root') } return }
   const idx = sm.list.indexOf(it);
   if (e.shiftKey && sm.last >= 0) { const [x, y] = [Math.min(idx, sm.last), Math.max(idx, sm.last)]; for (let i = x; i <= y; i++) sm.sel.add(sm.list[i].id) }
   else { sm.sel.has(it.id) ? sm.sel.delete(it.id) : sm.sel.add(it.id); sm.last = idx }
   smRenderList();
  };
+ $('#sm-list').ondblclick = e => {
+  if (e.target.closest('.sm-ck,[data-a],[data-g]')) return;
+  const row = e.target.closest('[data-id]'); const it = row && sm.list.find(i => i.id === row.dataset.id); if (!it) return;
+  canPreview(it) ? openViewer(it, sm.list) : openInDrive(it);
+ };
+ $('#sm-head').onclick = e => { const b = e.target.closest('[data-sort]'); if (b && !b.disabled) smSortBy(b.dataset.sort) };
+ $('#sm-head').onchange = e => { if (e.target.id === 'sm-all') { if (e.target.checked) sm.list.forEach(i => sm.sel.add(i.id)); else sm.sel.clear(); smRenderList() } };
+ $('#sm-active').onclick = e => { const b = e.target.closest('[data-clear]'); if (b) smClear(b.dataset.clear) };
  $('#sm-selbar').onclick = e => {
   const b = e.target.closest('[data-s]'); if (!b) return; const sel = sm.list.filter(i => sm.sel.has(i.id));
   ({ clear: () => { sm.sel.clear(); smRenderList() }, all: () => { sm.list.forEach(i => sm.sel.add(i.id)); smRenderList() }, extras: () => { sm.sel = new Set(sm.list.filter(i => i.dup > 1 && i.dupIdx > 0).map(i => i.id)); smRenderList() },
    trash: () => smTrash(sel), download: () => downloadSelection(sel), restore: () => smRestore(sel), delete: () => smDelete(sel), empty: smEmptyTrash })[b.dataset.s]();
  };
+
  document.addEventListener('keydown', e => {
   if (!sm.open) return;
-  if (e.key === 'Escape') { if (!$('#modal').classList.contains('visible') && !$('#viewer').classList.contains('visible') && !$('#menu').classList.contains('visible')) { smClose(); e.stopPropagation() } return }
+  if ($('#viewer').classList.contains('visible')) return; // o visualizador cuida das próprias teclas
+  if (e.key === 'Escape') { if (!$('#modal').classList.contains('visible') && !$('#menu').classList.contains('visible')) { smClose(); e.stopPropagation() } return }
+  if (!e.target.matches('input,select,textarea') && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') { e.preventDefault(); sm.list.forEach(i => sm.sel.add(i.id)); smRenderList() }
   e.stopPropagation();
  }, true);
 }

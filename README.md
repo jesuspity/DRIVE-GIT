@@ -50,7 +50,9 @@ Para não digitar o Client ID, preencha `CONFIG.clientId` no `index.html`.
 
 Botão **Gerenciar armazenamento**, logo abaixo da barra de capacidade. Abre uma tela que analisa os arquivos que são seus e permite:
 
-- ver o espaço por tipo e as **sugestões de limpeza** (temporários, formato desconhecido, duplicados, sem título, grandes e antigos);
+- ver o espaço por tipo num **gráfico de rosca** com legenda clicável, a estimativa de quanto pode ser liberado e as **sugestões de limpeza** (temporários, formato desconhecido, duplicados, sem título, grandes e antigos);
+- identificar cada arquivo por **miniatura**, **pasta de origem** e **barra de tamanho relativo**, **visualizar** sem sair da tela (clique na miniatura ou duplo clique) e ordenar clicando nos **cabeçalhos** da tabela (cabeçalho e barra de seleção ficam fixos ao rolar);
+- ver os **duplicados agrupados** (com “Selecionar cópias extras” por grupo, mantendo a mais antiga) e remover cada **filtro ativo** com um clique;
 - filtrar por **maiores**, **antigos** (data limite por modificação, criação ou último acesso), **sem título**, **nomes genéricos**, **duplicados**, **soltos na raiz** e **compartilhados**;
 - filtrar por **tipo** (imagem, áudio, vídeo, documento, planilha, apresentação, PDF, compactado) e depois por **formato** (jpg, png, mp3, wav, xls…), além de tamanho mínimo e nome;
 - selecionar e **mover para a lixeira** (com “Desfazer”), baixar, restaurar ou excluir definitivamente, e exportar a lista em **CSV**.
