@@ -168,6 +168,53 @@ body.nav-closed .sidebar{margin-left:-264px}
  .body{padding:0 8px 8px}.logo{width:auto}.logo-text{display:none}}
 @media(max-width:640px){.lhead,.row{grid-template-columns:minmax(120px,1fr) 44px}.c-date,.c-size,.lhead .h-date,.lhead .h-size{display:none}.crumbs{font-size:18px}.row .c-act{opacity:1}
  .fgrid{grid-template-columns:1fr}.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.thumb{height:110px}.avatar{width:32px;height:32px}.seg button{width:40px}}
+/* gerenciador de armazenamento */
+.sm-link{border:1px solid var(--outline);justify-content:center;gap:8px;padding:0 10px;margin:0 6px 12px;width:calc(100% - 12px);font-weight:500;font-size:13px;color:var(--primary)}.sm-link .lbl{flex:none}
+.sm{position:fixed;inset:0;z-index:55;background:var(--bg);display:none;flex-direction:column}.sm.visible{display:flex}
+.sm-top{height:64px;display:flex;align-items:center;gap:8px;padding:0 16px 0 8px;flex:none}.sm-top h2{font-size:22px;font-weight:400;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sm-top .grow{flex:1}
+.sm-body{flex:1;min-height:0;overflow:auto;padding:0 16px 24px}.sm-wrap{max-width:1180px;margin:0 auto}
+.sm-sum{background:var(--surface);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px}
+.sm-sum-h{font-size:15px;color:var(--muted)}.sm-sum-h b{font-size:26px;font-weight:500;color:var(--text);margin-right:4px}
+.sm-seg{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--line);margin:12px 0 10px;gap:2px}.sm-seg i{display:block;height:100%;min-width:3px}
+.sm-legend{display:flex;flex-wrap:wrap;gap:4px 6px}.sm-legend button{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;color:var(--muted);font-size:12.5px}
+.sm-legend button:hover,.sm-legend button.on{background:var(--primary-soft);color:var(--sel-text)}.sm-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}.sm-legend small{color:var(--faint)}
+.sm-facts{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:10px;font-size:12.5px;color:var(--muted)}.sm-facts b{color:var(--text);font-weight:500}.sm-facts .hint{color:var(--faint)}
+.sm-views{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
+.sm-views .chip{height:34px;padding:0 14px;border-radius:999px;background:var(--surface);border-color:transparent;gap:6px}.sm-views .chip small{color:var(--faint)}.sm-views .chip.on small{color:inherit}
+.sm-filters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;background:var(--surface);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px}
+.sm-f{display:flex;flex-direction:column;gap:4px;min-width:140px;flex:1 1 150px}.sm-f label{font-size:12px;color:var(--faint)}.sm-f .field{padding:9px 10px;font-size:14px;border-radius:8px}
+.sm-f.date{flex:2 1 320px}.sm-date-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.sm-date-row .field{flex:1 1 130px;width:auto}.sm-date-row .chip{height:36px}
+.sm-chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px;align-items:center}.sm-chips .lab{font-size:12px;color:var(--faint);margin-right:2px;min-width:52px}
+.sm-chips .chip{background:var(--surface)}.sm-chips .chip.on{background:var(--primary-soft)}.sm-chips .chip small{color:var(--faint)}.sm-chips .chip.on small{color:inherit}.sm-chips .chip .gi{display:inline-flex}.sm-chips .chip .gi .icon{width:18px;height:18px}
+.sm-selbar{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:var(--hover);border-radius:14px;padding:6px 8px 6px 14px;margin:10px 0 8px;min-height:48px;color:var(--muted)}
+.sm-selbar.on{background:var(--primary-soft);color:var(--sel-text)}.sm-selbar .info{flex:1;min-width:160px}.sm-selbar .info b{color:var(--text);font-weight:500}.sm-selbar.on .info b{color:inherit}
+.sm-selbar .btn{height:36px;padding:0 14px}.sm-selbar .btn.danger{color:var(--danger)}
+.sm-table{background:var(--surface);border-radius:var(--radius);overflow:hidden}
+.sm-row,.sm-head{display:grid;grid-template-columns:44px minmax(180px,1fr) 120px 110px 130px 84px;align-items:center;column-gap:8px;padding-right:8px}
+.sm-head{height:42px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:500;font-size:13px}
+.sm-row{min-height:52px;border-bottom:1px solid var(--line)}.sm-row:last-child{border-bottom:0}.sm-row:hover{background:var(--hover)}.sm-row.sel{background:var(--sel);color:var(--sel-text)}
+.sm-ck{display:grid;place-items:center;height:100%;cursor:pointer}.sm-ck input{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
+.sm-name{display:flex;align-items:center;gap:12px;min-width:0}.sm-name .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.sm-tag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:var(--primary-soft);color:var(--sel-text);font-size:11px;vertical-align:1px}
+.sm-c{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}.sm-row.sel .sm-c{color:inherit}.sm-c.sz{color:var(--text);font-weight:500;text-align:right;padding-right:10px}.sm-head .sz{text-align:right;padding-right:10px}
+.sm-act{display:flex;justify-content:flex-end}.sm-act .ib{width:36px;height:36px}.sm-act .ib .icon{width:19px;height:19px}
+.sm-empty{padding:56px 20px;text-align:center;color:var(--faint)}.sm-more{display:block;margin:12px auto 0}
+.sm-prog{display:inline-flex;align-items:center;gap:8px}.sm-prog::before{content:"";width:14px;height:14px;border:2px solid var(--outline);border-top-color:var(--primary);border-radius:50%;animation:smspin .8s linear infinite}@keyframes smspin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.sm-row,.sm-head{grid-template-columns:40px minmax(140px,1fr) 100px 76px}.sm-row .c-fmt,.sm-head .c-fmt,.sm-row .c-dt,.sm-head .c-dt{display:none}.sm-top h2{font-size:18px}.sm-top .btn-text span:last-child{display:none}}
+.sm-sugg{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.sm-sugg h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 8px}
+.sm-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.sm-card{text-align:left;border:1px solid var(--outline);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}.sm-card:hover{background:var(--hover)}
+.sm-card b{font-weight:500}.sm-card span{color:var(--primary);font-size:13px;font-weight:500}.sm-card small{color:var(--faint);font-size:12px}
+/* pesquisa avançada */
+.search .ib.on{background:var(--primary-soft);color:var(--sel-text)}
+.adv{position:fixed;z-index:75;display:none;background:var(--surface);border-radius:20px;box-shadow:var(--shadow);width:min(680px,calc(100vw - 24px));max-height:calc(100dvh - 80px);overflow:auto;padding:18px 20px 14px;top:58px;left:12px}
+.adv.visible{display:block}.adv h3{margin:0 0 12px;font-size:16px;font-weight:500}
+.adv-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px 14px}.adv-g .wide{grid-column:1/-1}
+.adv-f{display:flex;flex-direction:column;gap:4px;min-width:0}.adv-f>label,.adv-f>.l{font-size:12px;color:var(--faint)}.adv-f .field{padding:9px 10px;font-size:14px;border-radius:8px}
+.adv-r{display:flex;gap:6px;align-items:center}.adv-r .field{min-width:0}.adv-r .u{width:78px;flex:none}.adv-r span{color:var(--faint);font-size:12px}
+.adv-checks{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center}.adv-checks label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:var(--muted)}.adv-checks input{accent-color:var(--primary);width:16px;height:16px}
+.adv-foot{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+.adv-sep{height:1px;background:var(--line);margin:14px 0 2px}
 </style></head>
 <body>
 <div class="login" id="login"><div class="login-card">
@@ -186,6 +233,7 @@ body.nav-closed .sidebar{margin-left:-264px}
  <div class="logo"><div class="logo-shape">↥</div><span class="logo-text">Drive Pro</span></div>
  <div class="search"><span class="ib" style="width:36px;height:36px;pointer-events:none"><span data-icon="search"></span></span>
   <input id="search-input" type="search" placeholder="Pesquisar no Drive" autocomplete="off" aria-label="Pesquisar no Drive">
+  <button class="ib" id="adv-btn" title="Opções de pesquisa" aria-label="Opções de pesquisa"><span data-icon="tune"></span></button>
   <button class="ib" id="clear-search" style="display:none" title="Limpar" aria-label="Limpar pesquisa"><span data-icon="x"></span></button></div>
  <div class="grow"></div>
  <button class="ib" id="refresh-btn" title="Atualizar" aria-label="Atualizar"><span data-icon="refresh"></span></button>
@@ -202,6 +250,7 @@ body.nav-closed .sidebar{margin-left:-264px}
    <button class="nav-item" data-nav="starred"><span data-icon="star"></span><span class="lbl">Com estrela</span></button>
    <button class="nav-item" data-nav="trash"><span data-icon="trash"></span><span class="lbl">Lixeira</span></button></div>
   <div class="storage"><div id="storage-info">Armazenamento</div><div class="bar"><span id="storage-bar"></span></div></div>
+  <button class="nav-item sm-link" id="sm-btn"><span data-icon="pie"></span><span class="lbl">Gerenciar armazenamento</span></button>
  </aside>
  <main class="panel" id="panel">
   <div class="panel-head">
@@ -213,7 +262,7 @@ body.nav-closed .sidebar{margin-left:-264px}
    </div>
   </div>
   <div class="toolbar" id="toolbar">
-   <button class="chip" id="chip-type"></button><button class="chip" id="chip-date"></button>
+   <button class="chip" id="chip-type"></button><button class="chip" id="chip-date"></button><button class="chip" id="chip-adv" style="display:none"></button>
    <div class="selbar" id="selbar"></div>
   </div>
   <div class="banner" id="banner"></div>
@@ -222,6 +271,47 @@ body.nav-closed .sidebar{margin-left:-264px}
  </main>
  <aside class="details" id="details"><div class="details-in" id="details-in"></div></aside>
 </div></div>
+
+<div class="sm" id="sm" role="dialog" aria-modal="true" aria-label="Gerenciar armazenamento">
+ <div class="sm-top"><button class="ib" id="sm-close" title="Voltar ao Drive" aria-label="Voltar ao Drive"><span data-icon="back"></span></button><h2>Gerenciar armazenamento</h2><div class="grow"></div>
+  <button class="btn-text" id="sm-csv" title="Exportar a lista filtrada em CSV"><span data-icon="download"></span><span>Exportar CSV</span></button>
+  <button class="btn-text" id="sm-rescan" title="Analisar o Drive novamente"><span data-icon="refresh"></span><span>Reanalisar</span></button></div>
+ <div class="sm-body"><div class="sm-wrap">
+  <section class="sm-sum" id="sm-sum"></section>
+  <div class="sm-views" id="sm-views"></div>
+  <div class="sm-filters">
+   <div class="sm-f"><label for="sm-q">Nome contém</label><input class="field" id="sm-q" type="search" placeholder="Buscar na lista" autocomplete="off"></div>
+   <div class="sm-f"><label for="sm-min">Tamanho mínimo</label><select class="field" id="sm-min">
+    <option value="0">Qualquer tamanho</option><option value="1048576">≥ 1 MB</option><option value="10485760">≥ 10 MB</option><option value="52428800">≥ 50 MB</option>
+    <option value="104857600">≥ 100 MB</option><option value="524288000">≥ 500 MB</option><option value="1073741824">≥ 1 GB</option></select></div>
+   <div class="sm-f date" id="sm-datebox"><label for="sm-before">Antigos: data de referência e limite</label><div class="sm-date-row">
+    <select class="field" id="sm-ref" aria-label="Data de referência"><option value="modified">Última modificação</option><option value="created">Criação</option><option value="viewed">Último acesso por mim</option></select>
+    <input class="field" id="sm-before" type="date" aria-label="Antes de">
+    <button class="chip" data-yrs="1">1 ano</button><button class="chip" data-yrs="2">2 anos</button><button class="chip" data-yrs="3">3 anos</button><button class="chip" data-yrs="5">5 anos</button></div></div>
+   <div class="sm-f" id="sm-sortbox"><label for="sm-sort">Ordenar por</label><div class="sm-date-row"><select class="field" id="sm-sort"></select><button class="chip" id="sm-dir" aria-label="Inverter ordem"></button></div></div>
+  </div>
+  <div class="sm-chips" id="sm-types"></div>
+  <div class="sm-chips" id="sm-fmts"></div>
+  <div class="sm-selbar" id="sm-selbar"></div>
+  <div class="sm-table"><div class="sm-head"><label class="sm-ck"><input type="checkbox" id="sm-all" aria-label="Selecionar todos"></label><div>Nome</div><div class="c-fmt">Formato</div><div class="sz">Tamanho</div><div class="c-dt" id="sm-dthead">Modificado</div><div></div></div>
+   <div id="sm-list"></div></div>
+  <button class="btn outline sm-more" id="sm-more" style="display:none"></button>
+ </div></div>
+</div>
+<div class="adv" id="adv" role="dialog" aria-label="Pesquisa avançada"><h3>Pesquisa avançada</h3><div class="adv-g">
+ <div class="adv-f wide"><label for="adv-text">Contém o texto (dentro do conteúdo dos arquivos)</label><input class="field" id="adv-text" autocomplete="off" placeholder="Palavra ou frase dentro do arquivo"></div>
+ <div class="adv-f"><label for="adv-type">Tipo</label><select class="field" id="adv-type"></select></div>
+ <div class="adv-f"><label for="adv-ext">Formato / extensão</label><input class="field" id="adv-ext" autocomplete="off" placeholder="pdf, xlsx, jpg…"></div>
+ <div class="adv-f"><label for="adv-owner">Proprietário</label><select class="field" id="adv-owner"><option value="any">Qualquer pessoa</option><option value="me">Eu</option><option value="others">Outras pessoas</option></select></div>
+ <div class="adv-f"><label for="adv-mod">Modificado</label><select class="field" id="adv-mod"><option value="any">Qualquer data</option><option value="1">Últimas 24 horas</option><option value="7">Últimos 7 dias</option><option value="30">Últimos 30 dias</option><option value="90">Últimos 90 dias</option><option value="365">No último ano</option><option value="custom">Período personalizado…</option></select></div>
+ <div class="adv-f wide" id="adv-modrange"><span class="l">Modificado no período</span><div class="adv-r"><input class="field" type="date" id="adv-mfrom" aria-label="Modificado a partir de"><span>até</span><input class="field" type="date" id="adv-mto" aria-label="Modificado até"></div></div>
+ <div class="adv-f wide"><span class="l">Criado no período</span><div class="adv-r"><input class="field" type="date" id="adv-cfrom" aria-label="Criado a partir de"><span>até</span><input class="field" type="date" id="adv-cto" aria-label="Criado até"></div></div>
+ <div class="adv-f wide"><span class="l">Tamanho</span><div class="adv-r"><input class="field" type="number" min="0" step="any" id="adv-smin" placeholder="mínimo" aria-label="Tamanho mínimo"><select class="field u" id="adv-sminu" aria-label="Unidade mínima"><option value="kb">KB</option><option value="mb" selected>MB</option><option value="gb">GB</option></select>
+  <span>até</span><input class="field" type="number" min="0" step="any" id="adv-smax" placeholder="máximo" aria-label="Tamanho máximo"><select class="field u" id="adv-smaxu" aria-label="Unidade máxima"><option value="kb">KB</option><option value="mb" selected>MB</option><option value="gb">GB</option></select></div></div>
+ <div class="adv-f wide"><span class="l">Onde pesquisar</span><select class="field" id="adv-where"><option value="all">Todo o Drive (inclui drives compartilhados)</option><option value="here">Somente na pasta atual</option></select></div>
+</div><div class="adv-sep"></div><div class="adv-foot" style="justify-content:space-between;align-items:center;flex-wrap:wrap">
+ <div class="adv-checks"><label><input type="checkbox" id="adv-star">Com estrela</label><label><input type="checkbox" id="adv-shared">Compartilhados</label><label><input type="checkbox" id="adv-trash">Na lixeira</label></div>
+ <div style="display:flex;gap:8px"><button class="btn" id="adv-clear">Limpar</button><button class="btn primary" id="adv-apply">Pesquisar</button></div></div></div>
 
 <div class="dropzone" id="dropzone">Solte aqui para enviar ao Drive</div>
 <div class="popmenu" id="menu"></div>
@@ -420,8 +510,16 @@ async function breadcrumb(folderId, driveId, driveName) {
  }
  return crumbs.concat(rev.reverse());
 }
-async function queryFiles({ mode, folderId, driveId, q, type, date, sort, dir, pageToken, pageSize = PAGE, kind }) {
- const c = [mode === 'trash' ? 'trashed = true' : 'trashed = false'];
+async function queryFiles({ mode, folderId, driveId, q, type, date, sort, dir, pageToken, pageSize = PAGE, kind, adv }) {
+ const c = [mode === 'trash' || (adv && adv.trashed) ? 'trashed = true' : 'trashed = false'];
+ if (adv) {
+  if (adv.text) c.push(`fullText contains '${escQ(adv.text)}'`);
+  if (adv.mFrom) c.push(`modifiedTime > '${adv.mFrom}'`); if (adv.mTo) c.push(`modifiedTime < '${adv.mTo}'`);
+  if (adv.cFrom) c.push(`createdTime > '${adv.cFrom}'`); if (adv.cTo) c.push(`createdTime < '${adv.cTo}'`);
+  if (adv.owner === 'me') c.push("'me' in owners"); else if (adv.owner === 'others') c.push("not 'me' in owners");
+  if (adv.starred) c.push('starred = true');
+  if (adv.parent) c.push(`'${escQ(adv.parent)}' in parents`);
+ }
  if (mode === 'folder') c.push(`'${escQ(driveId && folderId === 'root' ? driveId : folderId)}' in parents`);
  if (mode === 'starred') c.push('starred = true');
  if (mode === 'shared') c.push('sharedWithMe = true');
@@ -471,7 +569,7 @@ function uniqueName(name, used) {
 const state = {
  mode: 'folder', folderId: 'root', driveId: '', driveName: '', search: '', type: 'all', date: 'all', sort: 'name', dir: 'asc',
  files: [], next: null, selected: new Set(), lastIndex: -1, view: store.get('dcp_view') || 'list', details: store.get('dcp_details') === '1',
- nonce: 0, loading: false, drives: [], crumbs: [], user: null
+ nonce: 0, loading: false, drives: [], crumbs: [], user: null, adv: null
 };
 const here = () => state.mode === 'folder' ? state.folderId : 'root';
 const findFile = id => state.files.find(f => f.id === id);
@@ -485,7 +583,7 @@ function navState() {
  renderTree();
 }
 function nav(mode = 'folder', id = 'root', driveId = '', driveName = '') {
- Object.assign(state, { mode, folderId: id, driveId, driveName, search: '' });
+ Object.assign(state, { mode, folderId: id, driveId, driveName, search: '', adv: null }); advUI();
  state.selected.clear(); state.lastIndex = -1; $('#search-input').value = ''; $('#clear-search').style.display = 'none';
  document.body.classList.remove('nav-open'); loadFiles();
 }
@@ -524,11 +622,12 @@ async function loadFiles(append = false) {
  if (!append) { metaCache.clear(); state.files = []; state.next = null; $('#files').innerHTML = '<div class="spin"></div>'; renderChrome() }
  navState();
  try {
-  const phase = state.phase, data = await queryFiles({ ...state, q: state.search, kind: phase === 'all' ? undefined : phase, pageToken: append && state.next !== '__files__' ? state.next : undefined });
+  const phase = state.phase, data = await queryFiles({ ...state, q: state.search, adv: state.adv, kind: phase === 'all' ? undefined : phase, pageToken: append && state.next !== '__files__' ? state.next : undefined });
   if (nonce !== state.nonce) return;
   const known = new Set(state.files.map(f => f.id));
   let incoming = (data.files || []).map(normal).filter(f => !known.has(f.id));
   if (state.type === 'other') incoming = incoming.filter(f => f.kind === 'other');
+  if (state.adv) incoming = incoming.filter(advPass);
   state.files.push(...incoming); state.next = data.nextPageToken || null;
   if (!state.next && phase === 'folders') { state.phase = 'files'; state.next = '__files__' } // pastas primeiro, depois arquivos
   renderFiles(); notice('');
@@ -1060,7 +1159,7 @@ async function signIn(silent) {
 function signOut() {
  const t = accessToken; accessToken = null; tokenExpires = 0; store.set('dcp_signed', '');
  try { if (t) google.accounts.oauth2.revoke(t, () => { }) } catch { }
- metaCache.clear(); treeReset(); state.files = []; state.selected.clear(); $('#files').innerHTML = ''; $('#login').classList.remove('hidden');
+ smReset(); metaCache.clear(); treeReset(); state.files = []; state.selected.clear(); $('#files').innerHTML = ''; $('#login').classList.remove('hidden');
 }
 function setView(v) { state.view = v; store.set('dcp_view', v); renderChrome(); renderFiles() }
 function setSort(sort, dir) { state.sort = sort; state.dir = dir; renderChrome(); loadFiles() }
@@ -1097,7 +1196,7 @@ function bind() {
  $('#banner').onclick = e => { if (e.target.id === 'empty-trash') emptyTrash() };
  let st; $('#search-input').oninput = e => {
   clearTimeout(st); const q = e.target.value.trim(); $('#clear-search').style.display = q ? '' : 'none';
-  st = setTimeout(() => { if (q) { Object.assign(state, { search: q, mode: 'search', driveId: '' }); state.selected.clear(); loadFiles() } else nav('folder') }, 450)
+  st = setTimeout(() => { if (q || state.adv) { Object.assign(state, { search: q, mode: 'search', driveId: '' }); state.selected.clear(); advUI(); loadFiles() } else nav('folder') }, 450)
  };
  $('#clear-search').onclick = () => nav('folder');
  $('#crumbs').onclick = e => {
@@ -1175,6 +1274,352 @@ function bind() {
  });
  window.addEventListener('beforeunload', e => { if (transfers.some(t => t.kind !== 'download' && ['running', 'preparing', 'queued', 'paused'].includes(t.status))) { e.preventDefault(); e.returnValue = '' } });
 }
-bind(); renderChrome(); renderTree();
+/* ---------- gerenciador de armazenamento ---------- */
+Object.assign(ICONS, {
+ 'pie': '<path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.6A9 9 0 0 1 20.4 9H15z"/>',
+ 'tune': '<path d="M4 6h9m4 0h3M4 12h3m4 0h9M4 18h11m4 0h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>'
+});
+const SM_KIND_LABEL = { image: 'Imagens', audio: 'Áudios', video: 'Vídeos', document: 'Documentos', spreadsheet: 'Planilhas', presentation: 'Apresentações', pdf: 'PDFs', archive: 'Compactados', other: 'Outros' };
+const SM_KIND_COLOR = { image: '#a142f4', audio: '#e8710a', video: '#c5221f', document: '#4285f4', spreadsheet: '#188038', presentation: '#f9ab00', pdf: '#d93025', archive: '#5f6368', other: '#9aa0a6' };
+const SM_NATIVE = { 'application/vnd.google-apps.document': 'Google Docs', 'application/vnd.google-apps.spreadsheet': 'Google Sheets', 'application/vnd.google-apps.presentation': 'Google Slides', 'application/vnd.google-apps.drawing': 'Google Drawings', 'application/vnd.google-apps.form': 'Google Forms', 'application/vnd.google-apps.site': 'Google Sites', 'application/vnd.google-apps.script': 'Apps Script', 'application/vnd.google-apps.jam': 'Jamboard', 'application/vnd.google-apps.map': 'My Maps' };
+const SM_ALIAS = { jpeg: 'jpg', jpe: 'jpg', tiff: 'tif', htm: 'html', mpeg: 'mpg' };
+const SM_UNTITLED = /(^|[\s_(-])(sem[\s_-]*t[ií]tulo|untitled|sem[\s_-]*nome|unnamed)([\s_)-]|\d|$)/i;
+const SM_GENERIC = /^(img|dsc[nf]?|pxl|mvimg|vid|mov|wp|photo|foto|image|imagem|aud|audio|ptt|scan|file|arquivo)[ _\-.]*\d[\d_\-. ()]*$/i;
+const SM_GENERIC2 = /^(screenshot|screen shot|captura de tela|whatsapp (image|audio|video|ptt|document)|grava[çc][aã]o|recording|voice|nova grava)/i;
+const SM_TEMP = /(^~\$|^~.*\.tmp$|^\.~lock|^\.#|~$|\.(tmp|temp|bak|backup|swp|swo|part|partial|crdownload|download|dmp|old|orig|lock|cache|chk|log)$|^(thumbs\.db|desktop\.ini|\.ds_store|ehthumbs\.db|\.localized)$)/i;
+const SM_KNOWN = new Set(('jpg png gif bmp webp svg tif ico heic heif raw cr2 nef arw dng psd ai eps xcf mp3 wav flac ogg m4a aac wma opus mid midi aif aiff amr mp4 mkv mov avi webm wmv flv m4v mpg 3gp mts ' +
+ 'pdf doc docx odt rtf txt md tex epub mobi azw3 xls xlsx xlsm xlsb ods csv tsv ppt pptx pps ppsx odp key numbers pages zip rar 7z tar gz tgz bz2 xz iso dmg ' +
+ 'json xml html css js ts jsx tsx py java c cpp h hpp cs go rs rb php sql yml yaml ini cfg conf toml sh bat ps1 ipynb r m mat rdata db sqlite mdb accdb ' +
+ 'exe msi apk deb rpm jar ttf otf woff woff2 dwg dxf stl obj kml kmz gpx ics vcf eml msg pst vsd vsdx pub mpp one xps odg bib srt vtt').split(' '));
+const SM_VIEWS = [['all', 'Todos'], ['largest', 'Maiores'], ['old', 'Antigos'], ['untitled', 'Sem título'], ['generic', 'Nomes genéricos'], ['temp', 'Temporários'], ['unknown', 'Formato desconhecido'], ['dups', 'Duplicados'], ['bigold', 'Grandes e antigos'], ['loose', 'Soltos na raiz'], ['shared', 'Compartilhados'], ['trash', 'Lixeira']];
+const SM_VPRED = {
+ untitled: it => it.untitled, generic: it => it.generic, temp: it => it.temp, unknown: it => it.unknown, dups: it => it.dup > 1,
+ bigold: it => it.quota >= 104857600 && it.tm < Date.now() - 63072000000, loose: it => it.parents.includes(sm.rootId), shared: it => it.shared
+};
+const SM_SUGG = {
+ temp: ['Arquivos temporários', 'Cache, backups e travas (.tmp, .bak, ~$…, .log)'], unknown: ['Formato desconhecido', 'Sem extensão ou com formato não reconhecido'],
+ dups: ['Arquivos duplicados', 'Cópias idênticas: mantenha apenas uma'], untitled: ['Sem título', 'Documentos sem nome, candidatos a revisão'], bigold: ['Grandes e antigos', '100 MB ou mais, sem alterações há 2+ anos']
+};
+const SM_SORTS = { size: ['Tamanho', it => it.quota], modified: ['Modificação', it => it.tm], created: ['Criação', it => it.tc], viewed: ['Último acesso', it => it.tv], name: ['Nome', it => it.name.toLowerCase()], kind: ['Formato', it => it.fmt] };
+const SM_FIELDS = 'id,name,mimeType,size,quotaBytesUsed,modifiedTime,createdTime,viewedByMeTime,parents,webViewLink,starred,shared,md5Checksum,fileExtension';
+const sm = {
+ open: false, scanning: '', nonce: 0, all: [], trash: null, doneDrive: false, rootId: '', quota: null, dupWaste: 0, dupGroups: 0,
+ view: 'all', kind: 'all', fmt: 'all', minSize: 0, q: '', ref: 'modified', before: '', sort: 'size', dir: 'desc', sel: new Set(), last: -1, shown: 200, list: []
+};
+
+function smItem(x) {
+ const n = normal(x), nm = n.name || '', base = nm.replace(/\.[^.]{1,8}$/, '').trim(), native = n.mimeType.startsWith(GAPPS), T = v => v ? Date.parse(v) : 0;
+ let fmt;
+ if (native) fmt = SM_NATIVE[n.mimeType] || 'Google (outro)';
+ else { fmt = (x.fileExtension || (nm.match(/\.([^.]{1,8})$/) || [])[1] || '').toLowerCase(); fmt = SM_ALIAS[fmt] || fmt || 'sem extensão' }
+ const known = native || SM_KNOWN.has(fmt) || n.kind !== 'other';
+ return Object.assign(n, {
+  quota: +x.quotaBytesUsed || +x.size || 0, fmt, native, md5: x.md5Checksum || '', viewed: x.viewedByMeTime || '',
+  tm: T(x.modifiedTime), tc: T(x.createdTime), tv: T(x.viewedByMeTime) || T(x.createdTime),
+  untitled: !nm.trim() || SM_UNTITLED.test(base), generic: SM_GENERIC.test(base) || SM_GENERIC2.test(base), temp: SM_TEMP.test(nm.trim()),
+  unknown: !native && (fmt === 'sem extensão' || !known), dup: 0, dupKey: '', dupIdx: 0, gw: 0
+ });
+}
+function smDups() {
+ const g = new Map(); sm.dupWaste = 0; sm.dupGroups = 0;
+ for (const it of sm.all) { it.dup = 0; it.gw = 0; if (it.md5 && it.size) { const k = it.md5 + ':' + it.size; if (!g.has(k)) g.set(k, []); g.get(k).push(it) } }
+ for (const [k, a] of g) if (a.length > 1) {
+  a.sort((p, q) => p.tc - q.tc); const w = a.slice(1).reduce((s, i) => s + i.quota, 0);
+  a.forEach((it, i) => { it.dup = a.length; it.dupKey = k; it.dupIdx = i; it.gw = w }); sm.dupWaste += w; sm.dupGroups++;
+ }
+}
+async function smPool(list, n, fn) { let i = 0; await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) await fn(list[i++]) })) }
+
+async function smScan(which) {
+ const my = ++sm.nonce, out = []; let pt, last = 0;
+ sm.scanning = which; if (which === 'drive') { sm.all = out; sm.doneDrive = false } else sm.trash = out;
+ const q = which === 'trash' ? `trashed = true and 'me' in owners and mimeType != '${FOLDER}'` : `trashed = false and 'me' in owners and mimeType != '${FOLDER}' and mimeType != '${SHORTCUT}'`;
+ smRenderAll();
+ try {
+  do {
+   const d = await jget('/files', { q, pageSize: 1000, corpora: 'user', spaces: 'drive', fields: `nextPageToken,files(${SM_FIELDS})`, pageToken: pt });
+   if (my !== sm.nonce) return;
+   for (const x of d.files || []) out.push(smItem(x));
+   pt = d.nextPageToken;
+   if (which === 'drive') smDups();
+   if (Date.now() - last > 400) { last = Date.now(); smRenderAll() }
+  } while (pt);
+  if (which === 'drive') sm.doneDrive = true;
+ } catch (e) { if (my === sm.nonce) toast('Falha ao analisar: ' + e.message, true) }
+ finally { if (my === sm.nonce) { sm.scanning = ''; smRenderAll() } }
+}
+async function smAbout() { try { sm.quota = (await jget('/about', { fields: 'storageQuota(limit,usage,usageInDrive,usageInDriveTrash)' })).storageQuota || {}; smRenderSum() } catch { } }
+function smOpen() {
+ sm.open = true; $('#sm').classList.add('visible'); document.body.classList.remove('nav-open'); smRenderAll(); smAbout();
+ if (!sm.rootId) jget('/files/root', { fields: 'id' }).then(r => { sm.rootId = r.id; smRenderAll() }).catch(() => { });
+ if (!sm.doneDrive && !sm.scanning) smScan('drive');
+ $('#sm-close').focus();
+}
+function smClose() { sm.open = false; $('#sm').classList.remove('visible') }
+function smReset() { sm.nonce++; Object.assign(sm, { all: [], trash: null, doneDrive: false, scanning: '', quota: null, rootId: '', view: 'all', kind: 'all', fmt: 'all', q: '', minSize: 0, before: '' }); sm.sel.clear(); smClose() }
+function smRescan() { sm.all = []; sm.trash = null; sm.doneDrive = false; sm.sel.clear(); metaCache.clear(); smAbout(); smScan('drive'); if (sm.view === 'trash') smScan('trash') }
+
+/* filtros e ordenação */
+const smBefore = () => sm.before ? new Date(sm.before + 'T23:59:59').getTime() : 0;
+const smRefT = it => sm.ref === 'created' ? it.tc : sm.ref === 'viewed' ? it.tv : it.tm;
+function smPass(it, skipKind, skipFmt) {
+ if (!skipKind && sm.kind !== 'all' && it.kind !== sm.kind) return false;
+ if (!skipFmt && sm.fmt !== 'all' && it.fmt !== sm.fmt) return false;
+ if (it.quota < sm.minSize) return false;
+ if (sm.q && !it.name.toLowerCase().includes(sm.q)) return false;
+ const p = SM_VPRED[sm.view]; if (p && !p(it)) return false;
+ if (sm.view === 'old') { const b = smBefore(); if (b && smRefT(it) > b) return false }
+ return true;
+}
+const smSource = () => sm.view === 'trash' ? sm.trash || [] : sm.all;
+function smList() {
+ const r = smSource().filter(it => smPass(it));
+ if (sm.view === 'dups') r.sort((a, b) => b.gw - a.gw || (a.dupKey < b.dupKey ? -1 : a.dupKey > b.dupKey ? 1 : 0) || a.tc - b.tc);
+ else {
+  const f = SM_SORTS[sm.sort][1], d = sm.dir === 'asc' ? 1 : -1;
+  r.sort((a, b) => { const x = f(a), y = f(b); return (x < y ? -1 : x > y ? 1 : 0) * d || a.name.localeCompare(b.name, 'pt-BR') });
+ }
+ return r;
+}
+function smSetView(v) {
+ sm.view = v; sm.sel.clear(); sm.last = -1; sm.shown = 200; sm.fmt = 'all';
+ if (v === 'largest') { sm.sort = 'size'; sm.dir = 'desc' }
+ if (v === 'old') { if (!sm.before) smYears(2, true); sm.sort = sm.ref === 'created' ? 'created' : sm.ref === 'viewed' ? 'viewed' : 'modified'; sm.dir = 'asc' }
+ if (v === 'trash' && !sm.trash && sm.scanning !== 'trash') { if (sm.scanning) { sm.nonce++; sm.scanning = '' } smScan('trash') }
+ else if (v !== 'trash' && !sm.doneDrive && !sm.scanning) smScan('drive');
+ smRenderAll();
+}
+function smYears(n, silent) { const d = new Date(); d.setFullYear(d.getFullYear() - n); sm.before = d.toISOString().slice(0, 10); $('#sm-before').value = sm.before; if (!silent) { sm.shown = 200; smRenderList() } }
+
+/* renderização */
+const smN = n => n.toLocaleString('pt-BR');
+function smCounts() {
+ const c = {}; for (const [k] of SM_VIEWS) c[k] = { n: 0, s: 0 };
+ for (const it of sm.all) { c.all.n++; c.all.s += it.quota; for (const k in SM_VPRED) if (SM_VPRED[k](it)) { c[k].n++; c[k].s += it.quota } }
+ c.dups.s = sm.dupWaste; c.largest = c.all; c.trash = { n: sm.trash ? sm.trash.length : -1, s: +(sm.quota || {}).usageInDriveTrash || 0 };
+ return c;
+}
+function smRenderAll() { if (!sm.open) return; smRenderSum(); smRenderViews(); smRenderFacets(); smRenderList() }
+function smRenderSum() {
+ if (!sm.open) return;
+ const q = sm.quota || {}, used = +q.usage || 0, limit = +q.limit || 0, drive = +q.usageInDrive || 0, trash = +q.usageInDriveTrash || 0, other = Math.max(0, used - drive);
+ const sums = {}; let tot = 0;
+ for (const it of sm.all) { const o = sums[it.kind] || (sums[it.kind] = { n: 0, s: 0 }); o.n++; o.s += it.quota; tot += it.quota }
+ const kinds = Object.keys(sums).filter(k => sums[k].s > 0).sort((a, b) => sums[b].s - sums[a].s), cn = smCounts();
+ const sugg = Object.keys(SM_SUGG).filter(k => cn[k].n > 0).sort((a, b) => cn[b].s - cn[a].s);
+ $('#sm-sum').innerHTML =
+  `<div class="sm-sum-h"><b>${bytes(used)}</b>${limit ? `de ${bytes(limit)} usados (${Math.round(used / limit * 100)}%)` : 'usados'}</div>` +
+  `<div class="sm-seg" role="img" aria-label="Distribuição por tipo">${kinds.map(k => `<i style="width:${sums[k].s / tot * 100}%;background:${SM_KIND_COLOR[k]}" title="${SM_KIND_LABEL[k]}: ${bytes(sums[k].s)}"></i>`).join('')}</div>` +
+  `<div class="sm-legend">${kinds.map(k => `<button data-kind="${k}" class="${sm.kind === k ? 'on' : ''}"><i style="background:${SM_KIND_COLOR[k]}"></i>${SM_KIND_LABEL[k]} <b>${bytes(sums[k].s)}</b> <small>${smN(sums[k].n)}</small></button>`).join('')}</div>` +
+  `<div class="sm-facts">${drive ? `<span>No Drive: <b>${bytes(drive)}</b></span>` : ''}<span>Lixeira: <b>${bytes(trash)}</b></span>${other > 0 ? `<span>Gmail e Fotos: <b>${bytes(other)}</b></span>` : ''}` +
+  `<span class="hint">${sm.scanning === 'drive' ? `<span class="sm-prog">Analisando… ${smN(sm.all.length)} arquivos</span>` : `${smN(sm.all.length)} arquivos analisados (somente os que são seus). Docs, Planilhas e Apresentações do Google não ocupam espaço.`}</span></div>` +
+  (sugg.length ? `<div class="sm-sugg"><h3>Sugestões de limpeza</h3><div class="sm-cards">${sugg.map(k => `<button class="sm-card" data-view="${k}"><b>${SM_SUGG[k][0]}</b><span>${smN(cn[k].n)} ${cn[k].n === 1 ? 'arquivo' : 'arquivos'} · ${k === 'dups' ? 'libera ' : ''}${bytes(cn[k].s)}</span><small>${SM_SUGG[k][1]}</small></button>`).join('')}</div></div>` : '');
+}
+function smRenderViews() {
+ const cn = smCounts();
+ $('#sm-views').innerHTML = SM_VIEWS.map(([k, l]) => {
+  const c = cn[k], tag = ['all', 'largest', 'old'].includes(k) ? '' : k === 'trash' ? (c.s ? bytes(c.s) : '') : (c.n ? smN(c.n) : '');
+  return `<button class="chip ${sm.view === k ? 'on' : ''}" data-view="${k}">${l}${tag ? ` <small>${tag}</small>` : ''}</button>`;
+ }).join('');
+ $('#sm-datebox').style.display = sm.view === 'old' ? '' : 'none';
+ $('#sm-sortbox').style.display = sm.view === 'dups' ? 'none' : '';
+ $('#sm-sort').innerHTML = Object.entries(SM_SORTS).map(([k, v]) => `<option value="${k}" ${sm.sort === k ? 'selected' : ''}>${v[0]}</option>`).join('');
+ $('#sm-dir').innerHTML = `${icon(sm.dir === 'asc' ? 'arrow-up' : 'arrow-down')}${sm.dir === 'asc' ? 'Crescente' : 'Decrescente'}`;
+}
+function smRenderFacets() {
+ const types = {}, fmts = {};
+ for (const it of smSource()) {
+  if (smPass(it, true, true)) { const o = types[it.kind] || (types[it.kind] = { n: 0, s: 0 }); o.n++; o.s += it.quota }
+  if (smPass(it, false, true)) { const o = fmts[it.fmt] || (fmts[it.fmt] = { n: 0, s: 0 }); o.n++; o.s += it.quota }
+ }
+ const tk = Object.keys(SM_KIND_LABEL).filter(k => types[k] || sm.kind === k);
+ $('#sm-types').innerHTML = `<span class="lab">Tipo</span><button class="chip ${sm.kind === 'all' ? 'on' : ''}" data-kind="all">Todos</button>` +
+  tk.map(k => `<button class="chip ${sm.kind === k ? 'on' : ''}" data-kind="${k}"><span class="gi k-${k}">${icon(ICONS[k] ? k : 'file')}</span>${SM_KIND_LABEL[k]} <small>${smN((types[k] || { n: 0 }).n)}</small></button>`).join('');
+ const fk = Object.keys(fmts).sort((a, b) => fmts[b].s - fmts[a].s || fmts[b].n - fmts[a].n).slice(0, 18);
+ if (sm.fmt !== 'all' && !fk.includes(sm.fmt)) fk.push(sm.fmt);
+ $('#sm-fmts').innerHTML = fk.length ? `<span class="lab">Formato</span><button class="chip ${sm.fmt === 'all' ? 'on' : ''}" data-fmt="all">Todos${sm.kind !== 'all' ? ' de ' + SM_KIND_LABEL[sm.kind].toLowerCase() : ''}</button>` +
+  fk.map(f => `<button class="chip ${sm.fmt === f ? 'on' : ''}" data-fmt="${esc(f)}">${esc(f)} <small>${smN((fmts[f] || { n: 0 }).n)}</small></button>`).join('') : '';
+}
+function smTags(it) {
+ const t = [];
+ if (sm.view !== 'trash') {
+  if (it.temp) t.push('temporário'); if (it.unknown) t.push('formato desconhecido'); if (it.dup > 1) t.push(it.dupIdx === 0 ? `original · ${it.dup} cópias` : `cópia ${it.dupIdx + 1}/${it.dup}`); if (it.untitled) t.push('sem título');
+ }
+ return t.map(x => `<span class="sm-tag">${x}</span>`).join('');
+}
+function smRowHTML(it) {
+ const on = sm.sel.has(it.id), t = sm.view === 'old' ? (sm.ref === 'created' ? it.createdTime : sm.ref === 'viewed' ? (it.viewed || it.createdTime) : it.modifiedTime) : it.modifiedTime;
+ return `<div class="sm-row ${on ? 'sel' : ''}" data-id="${esc(it.id)}"><label class="sm-ck"><input type="checkbox" data-ck ${on ? 'checked' : ''} aria-label="Selecionar ${esc(it.name)}"></label>` +
+  `<div class="sm-name">${glyph(it)}<span class="nm" title="${esc(it.name)}">${esc(it.name || '(sem nome)')}${smTags(it)}</span></div><div class="sm-c c-fmt">${esc(it.fmt)}</div>` +
+  `<div class="sm-c sz" ${it.native ? 'title="Arquivos nativos do Google não ocupam espaço"' : ''}>${it.native && !it.quota ? '—' : bytes(it.quota)}</div><div class="sm-c c-dt">${fmtDate(t)}</div>` +
+  `<div class="sm-act"><button class="ib" data-a="open" title="Abrir no Google Drive" aria-label="Abrir no Drive">${icon('external')}</button>${sm.view === 'trash' ? '' : `<button class="ib" data-a="folder" title="Mostrar na pasta" aria-label="Mostrar na pasta">${icon('folder')}</button>`}</div></div>`;
+}
+function smRenderList() {
+ if (!sm.open) return;
+ const list = sm.list = smList(), box = $('#sm-list');
+ const src = smSource(), busy = sm.scanning === (sm.view === 'trash' ? 'trash' : 'drive');
+ $('#sm-dthead').textContent = sm.view === 'old' ? { modified: 'Modificado', created: 'Criado', viewed: 'Último acesso' }[sm.ref] : 'Modificado';
+ box.innerHTML = list.slice(0, sm.shown).map(smRowHTML).join('') ||
+  `<div class="sm-empty">${busy ? '<span class="sm-prog">Analisando seu Drive…</span>' : !src.length && sm.view === 'trash' && sm.trash ? 'A lixeira está vazia.' : !src.length && !sm.doneDrive && sm.view !== 'trash' ? 'Nenhum arquivo analisado ainda.' : 'Nenhum arquivo encontrado com estes filtros.'}</div>`;
+ const more = $('#sm-more'); more.style.display = list.length > sm.shown ? '' : 'none'; more.textContent = `Mostrar mais (${smN(list.length - sm.shown)} restantes)`;
+ smRenderSel();
+}
+function smRenderSel() {
+ const list = sm.list, sel = list.filter(it => sm.sel.has(it.id)), size = sel.reduce((s, i) => s + i.quota, 0), total = list.reduce((s, i) => s + i.quota, 0), bar = $('#sm-selbar'), trash = sm.view === 'trash';
+ bar.classList.toggle('on', sel.length > 0);
+ const all = $('#sm-all'); all.checked = list.length > 0 && sel.length === list.length; all.indeterminate = sel.length > 0 && sel.length < list.length;
+ let html;
+ if (sel.length) html = `<div class="info"><b>${smN(sel.length)} selecionado${sel.length > 1 ? 's' : ''}</b> · ${trash ? 'ocupam' : 'liberam'} ${bytes(size)}</div>` +
+  (trash ? '<button class="btn" data-s="restore">Restaurar</button><button class="btn danger" data-s="delete">Excluir definitivamente</button>'
+   : '<button class="btn" data-s="download">Baixar</button><button class="btn danger" data-s="trash">Mover para a lixeira</button>') + '<button class="btn" data-s="clear">Limpar seleção</button>';
+ else html = `<div class="info"><b>${smN(list.length)}</b> arquivo${list.length === 1 ? '' : 's'} · ${bytes(total)}</div>` +
+  (sm.view === 'dups' && list.length ? '<button class="btn" data-s="extras">Selecionar cópias extras (manter a mais antiga)</button>' : '') +
+  (trash && sm.trash && sm.trash.length ? '<button class="btn danger" data-s="empty">Esvaziar lixeira</button>' : '') +
+  (list.length ? `<button class="btn" data-s="all">Selecionar todos (${smN(list.length)})</button>` : '');
+ bar.innerHTML = html;
+}
+
+/* ações */
+function smRemove(items) {
+ const ids = new Set(items.map(i => i.id)); sm.all = sm.all.filter(i => !ids.has(i.id)); ids.forEach(id => sm.sel.delete(id)); smDups();
+}
+async function smTrash(items) {
+ if (!items.length) return;
+ const ok = []; let fail = 0; toast(`Movendo ${smN(items.length)} item(ns) para a lixeira…`);
+ await smPool(items, 4, async it => { try { await patch(it.id, { trashed: true }); ok.push(it) } catch { fail++ } });
+ smRemove(ok); sm.trash = null; sm.sel.clear(); smRenderAll(); smAbout(); loadSession(); loadFiles();
+ toast(`${smN(ok.length)} item(ns) movido(s) para a lixeira${fail ? ` · ${fail} falha(s)` : ''}`, !ok.length && fail > 0, ok.length ? { text: 'Desfazer', run: () => smRestore(ok, true) } : null);
+}
+async function smRestore(items, quiet) {
+ if (!items.length) return;
+ const ok = []; let fail = 0; await smPool(items, 4, async it => { try { await patch(it.id, { trashed: false }); ok.push(it) } catch { fail++ } });
+ const ids = new Set(ok.map(i => i.id)); sm.all.push(...ok.filter(i => !sm.all.some(a => a.id === i.id))); smDups();
+ if (sm.trash) sm.trash = sm.trash.filter(i => !ids.has(i.id)); ids.forEach(id => sm.sel.delete(id));
+ smRenderAll(); smAbout(); loadSession(); loadFiles(); toast(quiet ? 'Ação desfeita' : `${smN(ok.length)} item(ns) restaurado(s)${fail ? ` · ${fail} falha(s)` : ''}`, !ok.length && fail > 0);
+}
+async function smDelete(items) {
+ if (!items.length || !confirm(`Excluir permanentemente ${smN(items.length)} item(ns)? Esta ação não pode ser desfeita.`)) return;
+ const ok = []; let fail = 0; toast('Excluindo…');
+ await smPool(items, 4, async it => { try { await gfetch(`${API}/files/${enc(it.id)}?supportsAllDrives=true`, { method: 'DELETE' }); ok.push(it.id) } catch { fail++ } });
+ sm.trash = (sm.trash || []).filter(i => !ok.includes(i.id)); ok.forEach(id => sm.sel.delete(id)); smRenderAll(); smAbout(); loadSession();
+ toast(`${smN(ok.length)} item(ns) excluído(s)${fail ? ` · ${fail} falha(s)` : ''}`, !ok.length && fail > 0);
+}
+async function smEmptyTrash() {
+ if (!confirm('Esvaziar a lixeira? Todos os itens serão excluídos permanentemente.')) return;
+ try { await gfetch(`${API}/files/trash`, { method: 'DELETE' }); sm.trash = []; sm.sel.clear(); smRenderAll(); smAbout(); loadSession(); toast('Lixeira esvaziada') } catch (e) { toast(e.message, true) }
+}
+function smCSV() {
+ const rows = sm.list; if (!rows.length) return toast('Nada para exportar', true);
+ const c = v => { v = String(v ?? ''); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g, '""') + '"' };
+ const head = ['Nome', 'Tipo', 'Formato', 'Tamanho (bytes)', 'Modificado', 'Criado', 'Último acesso', 'Link'];
+ const body = rows.map(it => [it.name, SM_KIND_LABEL[it.kind] || it.kind, it.fmt, it.quota, it.modifiedTime, it.createdTime, it.viewed, it.webViewLink].map(c).join(';'));
+ const blob = new Blob(['﻿' + [head.map(c).join(';'), ...body].join('\r\n')], { type: 'text/csv;charset=utf-8' });
+ const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'armazenamento-drive.csv'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+function smBind() {
+ $('#sm-btn').onclick = smOpen; $('#sm-close').onclick = smClose; $('#sm-rescan').onclick = smRescan; $('#sm-csv').onclick = smCSV;
+ const setKind = k => { sm.kind = sm.kind === k ? 'all' : k; sm.fmt = 'all'; sm.shown = 200; sm.sel.clear(); smRenderAll() };
+ $('#sm-sum').onclick = e => { const v = e.target.closest('[data-view]'); if (v) return smSetView(v.dataset.view); const k = e.target.closest('[data-kind]'); if (k) setKind(k.dataset.kind) };
+ $('#sm-views').onclick = e => { const v = e.target.closest('[data-view]'); if (v) smSetView(v.dataset.view) };
+ $('#sm-types').onclick = e => { const k = e.target.closest('[data-kind]'); if (!k) return; if (k.dataset.kind === 'all') { sm.kind = 'all'; sm.fmt = 'all'; sm.shown = 200; sm.sel.clear(); smRenderAll() } else setKind(k.dataset.kind) };
+ $('#sm-fmts').onclick = e => { const f = e.target.closest('[data-fmt]'); if (f) { sm.fmt = f.dataset.fmt; sm.shown = 200; sm.sel.clear(); smRenderAll() } };
+ let t; $('#sm-q').oninput = e => { clearTimeout(t); t = setTimeout(() => { sm.q = e.target.value.trim().toLowerCase(); sm.shown = 200; sm.sel.clear(); smRenderFacets(); smRenderList() }, 200) };
+ $('#sm-min').onchange = e => { sm.minSize = +e.target.value; sm.shown = 200; sm.sel.clear(); smRenderAll() };
+ $('#sm-ref').onchange = e => { sm.ref = e.target.value; sm.sort = sm.ref === 'created' ? 'created' : sm.ref === 'viewed' ? 'viewed' : 'modified'; sm.dir = 'asc'; smRenderAll() };
+ $('#sm-before').onchange = e => { sm.before = e.target.value; sm.shown = 200; sm.sel.clear(); smRenderAll() };
+ document.querySelectorAll('[data-yrs]').forEach(b => b.onclick = () => { smYears(+b.dataset.yrs); sm.sel.clear(); smRenderAll() });
+ $('#sm-sort').onchange = e => { sm.sort = e.target.value; sm.dir = sm.sort === 'name' || sm.sort === 'kind' ? 'asc' : 'desc'; smRenderViews(); smRenderList() };
+ $('#sm-dir').onclick = () => { sm.dir = sm.dir === 'asc' ? 'desc' : 'asc'; smRenderViews(); smRenderList() };
+ $('#sm-more').onclick = () => { sm.shown += 300; smRenderList() };
+ $('#sm-all').onchange = e => { if (e.target.checked) sm.list.forEach(i => sm.sel.add(i.id)); else sm.sel.clear(); smRenderList() };
+ $('#sm-list').onclick = e => {
+  const row = e.target.closest('[data-id]'); if (!row) return; const it = sm.list.find(i => i.id === row.dataset.id); if (!it) return;
+  const a = e.target.closest('[data-a]');
+  if (a) { if (a.dataset.a === 'open') openInDrive(it); else { smClose(); nav('folder', it.parents[0] || 'root') } return }
+  const idx = sm.list.indexOf(it);
+  if (e.shiftKey && sm.last >= 0) { const [x, y] = [Math.min(idx, sm.last), Math.max(idx, sm.last)]; for (let i = x; i <= y; i++) sm.sel.add(sm.list[i].id) }
+  else { sm.sel.has(it.id) ? sm.sel.delete(it.id) : sm.sel.add(it.id); sm.last = idx }
+  smRenderList();
+ };
+ $('#sm-selbar').onclick = e => {
+  const b = e.target.closest('[data-s]'); if (!b) return; const sel = sm.list.filter(i => sm.sel.has(i.id));
+  ({ clear: () => { sm.sel.clear(); smRenderList() }, all: () => { sm.list.forEach(i => sm.sel.add(i.id)); smRenderList() }, extras: () => { sm.sel = new Set(sm.list.filter(i => i.dup > 1 && i.dupIdx > 0).map(i => i.id)); smRenderList() },
+   trash: () => smTrash(sel), download: () => downloadSelection(sel), restore: () => smRestore(sel), delete: () => smDelete(sel), empty: smEmptyTrash })[b.dataset.s]();
+ };
+ document.addEventListener('keydown', e => {
+  if (!sm.open) return;
+  if (e.key === 'Escape') { if (!$('#modal').classList.contains('visible') && !$('#viewer').classList.contains('visible') && !$('#menu').classList.contains('visible')) { smClose(); e.stopPropagation() } return }
+  e.stopPropagation();
+ }, true);
+}
+
+/* ---------- pesquisa avançada ---------- */
+const ADV_ALIAS = { jpeg: 'jpg', jpe: 'jpg', tiff: 'tif', htm: 'html' };
+const extOf = f => { const e = ((f.name || '').match(/\.([^.]+)$/) || [])[1]; return e ? (ADV_ALIAS[e.toLowerCase()] || e.toLowerCase()) : '' };
+const advActive = a => !!a && !!(a.text || a.ext.length || a.mFrom || a.mTo || a.cFrom || a.cTo || a.smin || a.smax || a.owner !== 'any' || a.parent || a.starred || a.shared || a.trashed);
+function advCount(a) { return a ? [a.text, a.ext.length, a.mFrom || a.mTo, a.cFrom || a.cTo, a.smin || a.smax, a.owner !== 'any', a.parent, a.starred, a.shared, a.trashed, state.type !== 'all'].filter(Boolean).length : 0 }
+function advPass(f) {
+ const a = state.adv; if (!a) return true;
+ if ((a.smin || a.smax) && f.isFolder) return false;
+ if (a.smin && (f.size ?? 0) < a.smin) return false;
+ if (a.smax && (f.size ?? 0) > a.smax) return false;
+ if (a.ext.length && !a.ext.includes(extOf(f))) return false;
+ if (a.shared && !f.shared) return false;
+ return true;
+}
+const advOpen = () => $('#adv').classList.contains('visible');
+function advToggle(show) {
+ const p = $('#adv'); if (show === false || (show === undefined && advOpen())) { p.classList.remove('visible'); return }
+ const r = $('.search').getBoundingClientRect(); p.style.left = Math.max(12, Math.min(r.left, innerWidth - p.offsetWidth - 12)) + 'px'; p.style.top = (r.bottom + 6) + 'px';
+ $('#adv-type').innerHTML = Object.entries(TYPE_LABELS).map(([k, v]) => `<option value="${k}">${k === 'all' ? 'Qualquer tipo' : esc(v)}</option>`).join('');
+ const a = state.adv, v = (id, x) => { $('#' + id).value = x ?? '' }, d = ms => ms ? new Date(ms).toISOString().slice(0, 10) : '';
+ v('adv-text', a?.text); v('adv-type', state.type); v('adv-ext', a?.ext.join(', ')); v('adv-owner', a?.owner || 'any'); v('adv-mod', a?.modPreset || 'any');
+ v('adv-mfrom', a?.mFromDate); v('adv-mto', a?.mToDate); v('adv-cfrom', a?.cFromDate); v('adv-cto', a?.cToDate);
+ v('adv-smin', a?.sminRaw); v('adv-sminu', a?.sminU || 'mb'); v('adv-smax', a?.smaxRaw); v('adv-smaxu', a?.smaxU || 'mb'); v('adv-where', a?.parent ? 'here' : 'all');
+ $('#adv-star').checked = !!a?.starred; $('#adv-shared').checked = !!a?.shared; $('#adv-trash').checked = !!a?.trashed;
+ $('#adv-where').options[1].disabled = !(state.mode === 'folder' || a?.parent);
+ advModUI(); p.classList.add('visible'); $('#adv-text').focus();
+}
+function advModUI() { $('#adv-modrange').style.display = $('#adv-mod').value === 'custom' ? '' : 'none' }
+function advApply() {
+ const g = id => $('#' + id).value.trim(), U = { kb: 1024, mb: 1048576, gb: 1073741824 }, num = (id, u) => { const n = parseFloat(g(id).replace(',', '.')); return n > 0 ? Math.round(n * U[$('#' + u).value]) : 0 };
+ const day = (s, end) => s ? new Date(s + (end ? 'T23:59:59' : 'T00:00:00')).toISOString() : '';
+ const preset = g('adv-mod'); let mFrom = '', mTo = '';
+ if (preset === 'custom') { mFrom = day(g('adv-mfrom')); mTo = day(g('adv-mto'), true) } else if (preset !== 'any') mFrom = new Date(Date.now() - +preset * 864e5).toISOString();
+ const smin = num('adv-smin', 'adv-sminu'), smax = num('adv-smax', 'adv-smaxu');
+ if (smin && smax && smin > smax) return toast('O tamanho mínimo é maior que o máximo', true);
+ if (mFrom && mTo && mFrom > mTo) return toast('A data inicial é posterior à final', true);
+ const cFrom = day(g('adv-cfrom')), cTo = day(g('adv-cto'), true);
+ if (cFrom && cTo && cFrom > cTo) return toast('A data de criação inicial é posterior à final', true);
+ const here = g('adv-where') === 'here', prevParent = state.adv?.parent || '';
+ const parent = here ? (state.mode === 'folder' ? (state.driveId && state.folderId === 'root' ? state.driveId : state.folderId) : prevParent) : '';
+ const a = {
+  text: g('adv-text'), ext: g('adv-ext').toLowerCase().split(/[\s,;]+/).map(s => s.replace(/^\./, '')).map(s => ADV_ALIAS[s] || s).filter(Boolean), owner: g('adv-owner'),
+  modPreset: preset, mFrom, mTo, mFromDate: g('adv-mfrom'), mToDate: g('adv-mto'), cFrom, cTo, cFromDate: g('adv-cfrom'), cToDate: g('adv-cto'),
+  smin, smax, sminRaw: g('adv-smin'), smaxRaw: g('adv-smax'), sminU: g('adv-sminu'), smaxU: g('adv-smaxu'), parent,
+  starred: $('#adv-star').checked, shared: $('#adv-shared').checked, trashed: $('#adv-trash').checked
+ };
+ state.type = g('adv-type') || 'all';
+ const q = $('#search-input').value.trim(); advToggle(false);
+ if (!advActive(a) && !q && state.type === 'all') return advReset();
+ Object.assign(state, { adv: advActive(a) ? a : null, search: q, mode: 'search', driveId: '' }); state.selected.clear(); advUI(); loadFiles();
+}
+function advReset() { state.adv = null; state.type = 'all'; advToggle(false); advUI(); if (state.mode === 'search') { state.search = $('#search-input').value.trim(); if (state.search) loadFiles(); else nav('folder') } }
+function advUI() {
+ const n = advCount(state.adv), c = $('#chip-adv'); c.style.display = state.adv ? '' : 'none';
+ c.innerHTML = `${icon('tune')}Filtros avançados${n ? ` (${n})` : ''}<span data-adv-x title="Remover filtros" aria-label="Remover filtros" style="display:inline-flex;margin-left:2px">${icon('x')}</span>`; c.classList.toggle('on', !!state.adv);
+ $('#adv-btn').classList.toggle('on', !!state.adv); $('#clear-search').style.display = ($('#search-input').value.trim() || state.adv) ? '' : 'none';
+}
+function advBind() {
+ $('#adv-btn').onclick = e => { e.stopPropagation(); advToggle() };
+ $('#chip-adv').onclick = e => { e.stopPropagation(); if (e.target.closest('[data-adv-x]')) { state.adv = null; advUI(); if (state.mode === 'search') { state.search = $('#search-input').value.trim(); state.search ? loadFiles() : nav('folder') } } else advToggle(true) };
+ $('#adv-mod').onchange = advModUI; $('#adv-apply').onclick = advApply; $('#adv-clear').onclick = advReset;
+ $('#adv').onkeydown = e => { if (e.key === 'Enter' && e.target.matches('input')) { e.preventDefault(); advApply() } };
+ document.addEventListener('click', e => { if (advOpen() && !e.target.closest('#adv,#adv-btn,#chip-adv')) advToggle(false) });
+ document.addEventListener('keydown', e => { if (e.key === 'Escape' && advOpen()) { advToggle(false); e.stopPropagation() } }, true);
+ $('#search-input').addEventListener('keydown', e => { if (e.key === 'Enter' && state.adv) { Object.assign(state, { search: e.target.value.trim(), mode: 'search', driveId: '' }); loadFiles() } });
+}
+
+bind(); smBind(); advBind(); renderChrome(); renderTree();
 if (getClientId() && store.get('dcp_signed')) signIn(true);
 </script></body></html>
