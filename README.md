@@ -45,3 +45,17 @@ Para não digitar o Client ID, preencha `CONFIG.clientId` no `index.html`.
 - ZIP: sem compressão e até ~4 GB. Fora do Chrome/Edge (sem File System Access API) o ZIP/download é montado na memória (limite 1,5 GB).
 - Exportação de Docs/Sheets/Slides: máximo de 10 MB por arquivo (limite da API). Forms/Sites não são exportáveis.
 - Token de acesso dura 1 h; o app renova sozinho (pode abrir um pop-up do Google).
+
+## Gerenciar armazenamento
+
+Botão **Gerenciar armazenamento**, logo abaixo da barra de capacidade. Abre uma tela que analisa os arquivos que são seus e permite:
+
+- ver o espaço por tipo e as **sugestões de limpeza** (temporários, formato desconhecido, duplicados, sem título, grandes e antigos);
+- filtrar por **maiores**, **antigos** (data limite por modificação, criação ou último acesso), **sem título**, **nomes genéricos**, **duplicados**, **soltos na raiz** e **compartilhados**;
+- filtrar por **tipo** (imagem, áudio, vídeo, documento, planilha, apresentação, PDF, compactado) e depois por **formato** (jpg, png, mp3, wav, xls…), além de tamanho mínimo e nome;
+- selecionar e **mover para a lixeira** (com “Desfazer”), baixar, restaurar ou excluir definitivamente, e exportar a lista em **CSV**.
+
+## Pesquisa avançada
+
+O ícone de filtros dentro da barra de pesquisa permite buscar por texto dentro do arquivo, tipo, extensão, proprietário, período de modificação e de criação, tamanho mínimo/máximo, pasta atual, com estrela, compartilhados e lixeira.
+
